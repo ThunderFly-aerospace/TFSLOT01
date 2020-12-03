@@ -1,6 +1,9 @@
 include <../parameters.scad>
 
+global_clearance = 0.1;
+
 use <lib/stdlib/curvedPipe/curvedPipe.scad>
+use <lib/stdlib/naca4.scad>
 use <lib/stdlib/bolts.scad>
 
 $fn = 200;
@@ -8,9 +11,9 @@ $fn = 200;
 
 type = "naca"; // "naca" or "cylinder"
 //type = "cylinder";
-width = rotor_head_width;
+width = 35;
 echo("Sirka");
-echo(rotor_head_width);
+echo(width);
 
 pipe_d = 2;
 
@@ -59,7 +62,7 @@ pipe2_pos = [type=="naca"?length*0.3 : stage2_pos+stage2_len/2, 0, width/2];
 cap_head_overlay = 3;
 rail_x = 4.5;
 rail_h = sqrt(2*(rail_x*rail_x))/2;
-bolt_z = 15 - M3_head_height; // top of cap - head_height
+bolt_z = 15 - M3_nut_diameter; // top of cap - head_height
 
 
 module pipes()
@@ -329,10 +332,10 @@ module 888_5001_cap() translate([0, -width/2, -30]) rotate([-90, 0, 0]) {
 
 module cap_bolts() {
     // Vertical bolts cut-out
-    translate([sensor_pos[0] + 5, bolt_z + distance/2 , M3_head_diameter/2])
+    translate([sensor_pos[0] + 5, bolt_z + distance/2 , M3_nut_diameter/2])
         rotate([90, -90, 0])
             bolt(3, 10);
-    translate([sensor_pos[0] + 5, bolt_z + distance/2 , width - M3_head_diameter/2 + 2])
+    translate([sensor_pos[0] + 5, bolt_z + distance/2 , width - M3_nut_diameter/2 + 2])
         rotate([90, 90, 0])
             bolt(3, 10);
 }
