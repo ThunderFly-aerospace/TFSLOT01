@@ -8,15 +8,11 @@ use <lib/stdlib/bolts.scad>
 
 $fn = 200;
 
-
 type = "naca"; // "naca" or "cylinder"
 //type = "cylinder";
 width = 35;
-echo("Sirka");
-echo(width);
 
 pipe_d = 2;
-
 
 // for NACA type
 naca = 0045;
@@ -62,8 +58,9 @@ pipe2_pos = [type=="naca"?length*0.3 : stage2_pos+stage2_len/2, 0, width/2];
 cap_head_overlay = 3;
 rail_x = 4.5;
 rail_h = sqrt(2*(rail_x*rail_x))/2;
-bolt_z = 15 - M3_nut_diameter; // top of cap - head_height
-
+bolt_size = 3;
+bolt_len = 10;
+bolt_z = 15 - head_height(bolt_size); // top of cap - head_height
 
 module pipes()
 {
@@ -87,9 +84,9 @@ echo("NACA");
  echo(th);
  cube(50/2-th);
 
-curvedPipe([ [10, distance/2, h],
-			[100,0, h],
-			[100,100, h],
+curvedPipe([[10, distance/2, h],
+            [100,0, h],
+            [100,100, h],
             [100, 100, h],
             [100, 00, h]
 		   ],
@@ -101,8 +98,6 @@ curvedPipe([ [10, distance/2, h],
 //pipes();
 
 
-
-
 module 888_5001(){
 
 translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
@@ -112,28 +107,22 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
     union(){
     if(type == "naca"){
         intersection(){
-            translate([0, -distance/2, 0]) airfoil(naca = naca, L = length, N = 50, h= width, open = false);
-            translate([0, -distance/2, 0]) cube([length, distance, width]);
+            translate([0, -distance/2, 0])
+                airfoil(naca = naca, L = length, N = 50, h= width, open = false);
+            translate([0, -distance/2, 0])
+                cube([length, distance, width]);
         }
         intersection(){
-            translate([0, -distance/2, 0]) airfoil(naca = 0015, L = length, N = 50, h= width, open = false);
-            translate([0,-distance*1.5, 0]) cube([length, distance, width]);
+            translate([0, -distance/2, 0])
+                airfoil(naca = 0015, L = length, N = 50, h= width, open = false);
+            translate([0,-distance/2, 0])
+                cube([length, distance, width]);
         }
-            translate([0, -distance/2, 0]) cube([length, distance, 2]);
-            translate([0, -distance/2, width-2]) cube([length, distance, 2]);
+            translate([0, -distance/2, 0])
+                cube([length, distance, 2]);
+            translate([0, -distance/2, width-2])
+                cube([length, distance, 2]);
     }
-
-    // Usi pro TF-G2
-    // translate([length-15, -distance/2, 0]) difference() {
-    //     hull(){
-    //         translate([0, -15, 0]) cylinder(d = 10, h = width);
-    //         translate([5, 0, 0]) cylinder(d = 5, h = width);
-    //         translate([-5, 0, 0]) cylinder(d = 5, h = width);
-    //     }
-
-    //     translate([0, -15, width/2]) cube( rotor_head_width-2*rotorhead_wall_thickness, center = true);
-
-    //     }
 
     // Spodni profil
     difference(){
@@ -170,8 +159,10 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
 
             // schod pro PCB
             hull(){
-                translate([-15/2 + sensor_pos[0], distance/2, 0]) cube([15, sensor_rantl, width]);
-                translate([-15/2 + sensor_pos[0], distance/2, 0]) cube([20, 0.1, width]);
+                translate([-15/2 + sensor_pos[0], distance/2, 0])
+                    cube([15, sensor_rantl, width]);
+                translate([-15/2 + sensor_pos[0], distance/2, 0])
+                    cube([20, 0.1, width]);
             }
 
 
@@ -181,43 +172,31 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
             union(){
                 translate([sensor_pos[0] - pcb_sensor_from_top, distance/2, 0])
                     cube([pcb_length, sensor_rantl + pcb_thickness,
-                          //width/2 - pcb_width/2 - pcb_offset - 1.1]);
                           width/2 - pcb_width/2 - pcb_offset]);
                 translate([sensor_pos[0] - pcb_sensor_from_top, distance/2,
-                           //width/2 + pcb_width/2 - pcb_offset - 1.1])
                            width/2 + pcb_width/2 - pcb_offset])
                     difference(){
                         cube([pcb_length, sensor_rantl + pcb_thickness,
-                              //width/2 - pcb_width/2 + pcb_offset + 1.1]);
-                              width/2 - pcb_width/2 + pcb_offset + 2]);
-                        translate([-0.01, 0, 0])
-                        rotate([-60, 0, 0])
-                            cube([pcb_length + 0.02, sensor_rantl + pcb_thickness,
-                                  width/2 - pcb_width/2 + pcb_offset]);
+                              width/2 - pcb_width/2 + pcb_offset]);
+                        translate([-0.01, 1, 0])
+                            rotate([-60, 0, 0])
+                                cube([pcb_length + 0.02, sensor_rantl + pcb_thickness,
+                                      width/2 - pcb_width/2 + pcb_offset]);
                     }
                 translate([sensor_pos[0] - pcb_sensor_from_top - 2, distance/2, 0])
                     cube([2, sensor_rantl + pcb_thickness, width]);
 
-            // PCB
-            //if(!$preview)
-            
             }
         }
 
-
-        // jan.kott: What was this good for?
-        //translate([0, 0, width/2 + 25 + rotor_head_width/2]) rotate([90-pylon_top_angle, 0, 0]) cube(50, center = true);
-        //translate([0, 0, width/2 -25 - rotor_head_width/2]) rotate([pylon_top_angle, 0, 0]) cube(50, center = true);
-
-
         h = width/2;
-
 
         // trubicky pro tlak
         union(){
             if(!$preview)
             curvedPipe([
-                    sensor_pos + [sensor_nose_distance/2, -sensor_nose_hole_depth-sensor_sealing_nose_length+0.1, 0],
+                    sensor_pos + [sensor_nose_distance/2,
+                                  -sensor_nose_hole_depth-sensor_sealing_nose_length+0.1, 0],
                     sensor_pos + [sensor_nose_distance/2, -5, 0],
         			pipe2_pos  + [0, distance/2-6, 0],
         			pipe2_pos + [0, 0, 0]
@@ -229,7 +208,8 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
 
             if(!$preview)
             curvedPipe([
-                    sensor_pos + [-sensor_nose_distance/2, -sensor_nose_hole_depth-sensor_sealing_nose_length+0.1, 0],
+                    sensor_pos + [-sensor_nose_distance/2,
+                                  -sensor_nose_hole_depth-sensor_sealing_nose_length+0.1, 0],
                     sensor_pos + [-sensor_nose_distance/2, -7, 0],
         			pipe1_pos + [0, distance/2-4, 0],
         			pipe1_pos + [0, 0, 0],
@@ -244,8 +224,11 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
             for(x = [0.5, -0.5])
             translate(sensor_pos + [sensor_nose_distance*x, 0, 0])
                 rotate([90, 0, 0]){
-                    cylinder(d = sensor_nose_hole_diameter, h= sensor_nose_hole_depth*2, center=true, $fn = 15);
-                    translate([0, 0, sensor_nose_hole_depth]) cylinder(d2 = pipe_d, d1 = sensor_sealing_nose_diameter ,h= sensor_sealing_nose_length, $fn = 15);
+                    cylinder(d = sensor_nose_hole_diameter, h= sensor_nose_hole_depth*2,
+                             center=true, $fn = 15);
+                    translate([0, 0, sensor_nose_hole_depth])
+                        cylinder(d2 = pipe_d, d1 = sensor_sealing_nose_diameter,
+                                 h= sensor_sealing_nose_length, $fn = 15);
                 }
 
             }
@@ -257,7 +240,7 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
 
     union(){
         // Rails
-        for(y = [rail_h, width - rail_h + 2])
+        for(y = [rail_h, width - rail_h])
             translate([length/2 + 0.01, distance/2 + sensor_rantl + pcb_thickness , y])
                 difference(){
                     rotate([45, 0, 0])
@@ -267,9 +250,6 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
         translate([0, distance/2 + sensor_rantl - 3, -0.01])
             cube([cap_head_overlay + 0.01, sensor_rantl + pcb_thickness + 0.01, width + 0.02]);
     }
-
-
-    //if($preview) translate([-50, -50, width/2]) cube(100);
     }
 }
 
@@ -299,12 +279,12 @@ module support_888_5001(){
 }
 // % support_888_5001();
 
-module 888_5001_cap() translate([0, -width/2, -30]) rotate([-90, 0, 0]) {
+module 888_5001_cap() translate([0, -width/2, -8]) rotate([-90, 0, 0]) {
     difference(){
         translate([0, distance/2 + 1, 0])
             union(){
                 difference(){
-                    airfoil(naca = naca, L = 1.3*length, N = 50, h= width + 2, open = false);
+                    airfoil(naca = naca, L = 1.3*length, N = 50, h= width, open = false);
                     // Bottom cut-out
                     translate([cap_head_overlay - global_clearance, -length + 5, -width/2])
                         cube([length, length, 2*width]);
@@ -312,7 +292,7 @@ module 888_5001_cap() translate([0, -width/2, -30]) rotate([-90, 0, 0]) {
                         cube([2*length, length, 2*width]);
                 }
                 // Rails
-                for(y = [rail_h, width - rail_h + 2])
+                for(y = [rail_h, width - rail_h])
                     translate([length/2 + 1, 5 + global_clearance/2, y])
                         difference(){
                             rotate([45, 0, 0])
@@ -326,20 +306,29 @@ module 888_5001_cap() translate([0, -width/2, -30]) rotate([-90, 0, 0]) {
             cube([length, length, 2*width]);
         // Vertical bolts cut-out
         cap_bolts();
-        // Horizontal  bolts cut-out
+        // Horizontal bolts cut-out
+        translate([26, distance - 3, -(bolt_len - 2)])
+            rotate([0, 0, -90])
+                bolt(bolt_size, bolt_len);
+        translate([26, distance - 3, width + (bolt_len - 2)])
+            rotate([0, 180, 90])
+                bolt(bolt_size, bolt_len);
+        // Spherical cut-out
+        translate([8, distance - 3, 0])
+            sphere(d = bolt_diameter(bolt_size));
+        translate([8, distance - 3, width])
+            sphere(d = bolt_diameter(bolt_size));
     }
 }
 
 module cap_bolts() {
     // Vertical bolts cut-out
-    translate([sensor_pos[0] + 5, bolt_z + distance/2 , M3_nut_diameter/2])
+    translate([sensor_pos[0] + 5, bolt_z + distance/2 , head_diameter(bolt_size)/2])
         rotate([90, -90, 0])
-            bolt(3, 10);
-    translate([sensor_pos[0] + 5, bolt_z + distance/2 , width - M3_nut_diameter/2 + 2])
+            bolt(bolt_size, bolt_len);
+    translate([sensor_pos[0] + 5, bolt_z + distance/2 , width - head_diameter(bolt_size)/2])
         rotate([90, 90, 0])
-            bolt(3, 10);
+            bolt(bolt_size, bolt_len);
 }
 
-
 888_5001_cap();
-echo(width + 2);
