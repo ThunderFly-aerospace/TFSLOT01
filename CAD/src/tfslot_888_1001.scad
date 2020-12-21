@@ -15,8 +15,8 @@ width = 35;
 pipe_d = 2;
 
 // for NACA type
-naca = 0045;
-distance = 22;
+naca = 0035;
+distance = 19;
 length = 40;
 profile_thickness = surface_distance(x = 0.25, naca = naca)*length;
 
@@ -80,7 +80,7 @@ h = width/2;
 d = 3;
 
 echo("NACA");
- th = surface_distance(x = 0.25, naca = 0040)*60;
+ th = surface_distance(x = 0.25, naca = naca)*60;
  echo(th);
  cube(50/2-th);
 
@@ -98,7 +98,7 @@ curvedPipe([[10, distance/2, h],
 //pipes();
 
 
-module 888_5001(){
+module tfslot_888_1001(){
 
 translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
 
@@ -219,6 +219,9 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
     			[3, 2, 1, 2],
     		    pipe_d, 0
             );
+            
+            // rez anemometrem - zobrazit trubicky
+            //translate([0, -20, width/2]) cube(100);
 
 
             for(x = [0.5, -0.5])
@@ -253,7 +256,7 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
     }
 }
 
-888_5001();
+tfslot_888_1001();
 
 
 
@@ -279,7 +282,7 @@ module support_888_5001(){
 }
 // % support_888_5001();
 
-module 888_5001_cap() translate([0, -width/2, -8]) rotate([-90, 0, 0]) {
+module tfslot_888_1002() translate([0, -width/2, -8]) rotate([-90, 0, 0]) {
     difference(){
         translate([0, distance/2 + 1, 0])
             union(){
@@ -331,4 +334,4 @@ module cap_bolts() {
             bolt(bolt_size, bolt_len);
 }
 
-888_5001_cap();
+tfslot_888_1002();
