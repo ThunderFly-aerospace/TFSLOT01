@@ -29,6 +29,9 @@ sensor_sealing_nose_diameter = 1.5;
 sensor_sealing_nose_length = 2;
 
 
+// montaz primo z horni strany anemometru (skrze vicko)
+direct_mount = 1;
+
 
 // Krabicka na PCB
 
@@ -219,7 +222,7 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
     			[3, 2, 1, 2],
     		    pipe_d, 0
             );
-            
+
             // rez anemometrem - zobrazit trubicky
             //translate([0, -20, width/2]) cube(100);
 
@@ -287,7 +290,14 @@ module tfslot_888_1002() translate([0, -width/2, -8]) rotate([-90, 0, 0]) {
         translate([0, distance/2 + 1, 0])
             union(){
                 difference(){
-                    airfoil(naca = naca, L = 1.3*length, N = 50, h= width, open = false);
+                    hull(){
+                      airfoil(naca = naca, L = 1.3*length, N = 50, h= width, open = false);
+                      //translate([22, 6, 0])
+                      //  cylinder(d = M3_head_diameter, h = width);
+                      if(direct_mount)
+                        translate([14-5, 0, 0])
+                          cube([10, 10, width]);
+                    }
                     // Bottom cut-out
                     translate([cap_head_overlay - global_clearance, -length + 5, -width/2])
                         cube([length, length, 2*width]);
@@ -296,10 +306,10 @@ module tfslot_888_1002() translate([0, -width/2, -8]) rotate([-90, 0, 0]) {
                 }
                 // Rails
                 for(y = [rail_h, width - rail_h])
-                    translate([length/2 + 1, 5 + global_clearance/2, y])
+                    translate([length/2 , 5 + global_clearance/2, y])
                         difference(){
                             rotate([45, 0, 0])
-                                cube([length - 1.5, rail_x, rail_x], center=true);
+                                cube([length - 5, rail_x, rail_x], center=true);
                             translate([0, rail_h, 0])
                                 cube([length, 2*rail_h, 2*rail_h], center=true);
                         }
@@ -309,18 +319,20 @@ module tfslot_888_1002() translate([0, -width/2, -8]) rotate([-90, 0, 0]) {
             cube([length, length, 2*width]);
         // Vertical bolts cut-out
         cap_bolts();
-        // Horizontal bolts cut-out
-        translate([26, distance - 3, -(bolt_len - 2)])
-            rotate([0, 0, -90])
-                bolt(bolt_size, bolt_len);
-        translate([26, distance - 3, width + (bolt_len - 2)])
-            rotate([0, 180, 90])
-                bolt(bolt_size, bolt_len);
-        // Spherical cut-out
-        translate([8, distance - 3, 0])
-            sphere(d = bolt_diameter(bolt_size));
-        translate([8, distance - 3, width])
-            sphere(d = bolt_diameter(bolt_size));
+        if(!direct_mount){
+          // Horizontal bolts cut-out
+          translate([22, distance - 1.5, -(bolt_len - 2)])
+              rotate([0, 0, -90])
+                  bolt(bolt_size, bolt_len);
+          translate([22, distance - 1.5, width + (bolt_len - 2)])
+              rotate([0, 180, 90])
+                  bolt(bolt_size, bolt_len);
+          // Spherical cut-out
+          translate([8, distance - 3, 0])
+              sphere(d = bolt_diameter(bolt_size));
+          translate([8, distance - 3, width])
+              sphere(d = bolt_diameter(bolt_size));
+        }
     }
 }
 
