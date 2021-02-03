@@ -33,7 +33,8 @@ sensor_sealing_nose_length = 2;
 // Krabicka na PCB
 
 pcb_width = 15;
-pcb_offset = 0.65;
+pcb_offset = 0;
+pcb_sensor_offset = -0.65;
 pcb_length = 36;
 pcb_sensor_from_top = 5;
 pcb_thickness = 3;
@@ -108,13 +109,13 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
     if(type == "naca"){
         intersection(){
             translate([0, -distance/2, 0])
-                airfoil(naca = naca, L = length, N = 50, h= width, open = false);
+                airfoil(naca = naca, L = length, N = 100, h= width, open = false);
             translate([0, -distance/2, 0])
                 cube([length, distance, width]);
         }
         intersection(){
             translate([0, -distance/2, 0])
-                airfoil(naca = 0015, L = length, N = 50, h= width, open = false);
+                airfoil(naca = 0015, L = length, N = 100, h= width, open = false);
             translate([0,-distance/2, 0])
                 cube([length, distance, width]);
         }
@@ -127,33 +128,14 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
     // Spodni profil
     difference(){
         union(){
-            if(type == "naca"){
             intersection(){
                 translate([0, distance/2, 0])
-                    airfoil(naca = naca, L = length, N = 50, h= width, open = false);
-                translate([0, -distance/2, 0])
-                    cube([length, distance, width]);
-            }}
-            else{
-                difference(){
-                    translate([0, -distance/2, -2])
-                        cube([length, distance, width+4]);
-                    linear_extrude(width) polygon([
-                        //[0, -1],
-                        [0, stage1_dia/2],
-                        [stage1_len, stage1_dia/2],
-                        [stage2_pos, stage2_dia/2],
-                        [stage2_pos+stage2_len, stage2_dia/2],
-                        [length-stage3_len, stage3_dia/2],
-                        [length, stage3_dia/2],
-
-                        [length, -stage3_dia/2],
-                        [length-stage3_len, -stage3_dia/2],
-                        [stage2_pos+stage2_len, -stage2_dia/2],
-                        [stage2_pos, -stage2_dia/2],
-                        [stage1_len, -stage1_dia/2],
-                        [0, -stage1_dia/2],
-                        ]);
+                    airfoil(naca = naca, L = length, N = 100, h= width, open = false);
+                union(){
+                    translate([0, -distance/2, 0])
+                        cube([length, distance, width]);
+                    translate([])
+                        cube([3, distance*2, width]);
                 }
             }
 
@@ -178,10 +160,10 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
                     difference(){
                         cube([pcb_length, sensor_rantl + pcb_thickness,
                               width/2 - pcb_width/2 + pcb_offset]);
-                        translate([-0.01, 1, 0])
-                            rotate([-60, 0, 0])
-                                cube([pcb_length + 0.02, sensor_rantl + pcb_thickness,
-                                      width/2 - pcb_width/2 + pcb_offset]);
+                        //#translate([-0.01, 1, 0])
+                        //    rotate([-60, 0, 0])
+                        //        cube([pcb_length + 0.02, sensor_rantl + pcb_thickness,
+                        //              width/2 - pcb_width/2 + pcb_offset]);
                     }
                 translate([sensor_pos[0] - pcb_sensor_from_top - 2, distance/2, 0])
                     cube([2, sensor_rantl + pcb_thickness, width]);
@@ -196,8 +178,8 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
             if(!$preview)
             curvedPipe([
                     sensor_pos + [sensor_nose_distance/2,
-                                  -sensor_nose_hole_depth-sensor_sealing_nose_length+0.1, 0],
-                    sensor_pos + [sensor_nose_distance/2, -5, 0],
+                                  -sensor_nose_hole_depth-sensor_sealing_nose_length+0.1, pcb_sensor_offset],
+                    sensor_pos + [sensor_nose_distance/2, -5, pcb_sensor_offset/2],
         			pipe2_pos  + [0, distance/2-6, 0],
         			pipe2_pos + [0, 0, 0]
                 ],
@@ -209,8 +191,8 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
             if(!$preview)
             curvedPipe([
                     sensor_pos + [-sensor_nose_distance/2,
-                                  -sensor_nose_hole_depth-sensor_sealing_nose_length+0.1, 0],
-                    sensor_pos + [-sensor_nose_distance/2, -7, 0],
+                                  -sensor_nose_hole_depth-sensor_sealing_nose_length+0.1, pcb_sensor_offset],
+                    sensor_pos + [-sensor_nose_distance/2, -7, pcb_sensor_offset/2],
         			pipe1_pos + [0, distance/2-4, 0],
         			pipe1_pos + [0, 0, 0],
 
@@ -223,9 +205,9 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
             // rez anemometrem - zobrazit trubicky
             //translate([0, -20, width/2]) cube(100);
 
-
+            // Vyusteni trubicky do PCB
             for(x = [0.5, -0.5])
-            translate(sensor_pos + [sensor_nose_distance*x, 0, 0])
+            translate(sensor_pos + [sensor_nose_distance*x, 0, pcb_sensor_offset])
                 rotate([90, 0, 0]){
                     cylinder(d = sensor_nose_hole_diameter, h= sensor_nose_hole_depth*2,
                              center=true, $fn = 15);
@@ -239,20 +221,21 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
     }
 
     //  otvory pro pripevneni vicka
-    cap_bolts();
+    //cap_bolts();
+    cap_holes();
 
-    union(){
-        // Rails
-        for(y = [rail_h, width - rail_h])
-            translate([length/2 + 0.01, distance/2 + sensor_rantl + pcb_thickness , y])
-                difference(){
-                    rotate([45, 0, 0])
-                        cube([length + 0.01, rail_x, rail_x], center=true);
-                }
-        // Lid front cut-out
-        translate([0, distance/2 + sensor_rantl - 3, -0.01])
-            cube([cap_head_overlay + 0.01, sensor_rantl + pcb_thickness + 0.01, width + 0.02]);
-    }
+    // union(){
+    //     // Rails
+    //     for(y = [rail_h, width - rail_h])
+    //         translate([length/2 + 0.01, distance/2 + sensor_rantl + pcb_thickness , y])
+    //             difference(){
+    //                 rotate([45, 0, 0])
+    //                     cube([length + 0.01, rail_x, rail_x], center=true);
+    //             }
+    //     // Lid front cut-out
+    //     translate([0, distance/2 + sensor_rantl - 3, -0.01])
+    //         cube([cap_head_overlay + 0.01, sensor_rantl + pcb_thickness + 0.01, width + 0.02]);
+    // }
     }
 }
 
@@ -332,6 +315,18 @@ module cap_bolts() {
     translate([sensor_pos[0] + 5, bolt_z + distance/2 , width - head_diameter(bolt_size)/2])
         rotate([90, 90, 0])
             bolt(bolt_size, bolt_len);
+}
+
+
+
+module cap_holes() {
+    // Vertical bolts cut-out
+    translate([sensor_pos[0] + 5, bolt_z + distance/2 , head_diameter(bolt_size)])
+        rotate([90, -90, 0])
+            cylinder(d=2, h = 15);
+    translate([sensor_pos[0] + 5, bolt_z + distance/2 , width - head_diameter(bolt_size)])
+        rotate([90, 90, 0])
+            cylinder(d=2, h = 15);
 }
 
 tfslot_888_1002();
