@@ -99,7 +99,9 @@ curvedPipe([[10, distance/2, h],
 //pipes();
 
 
-module tfslot_888_1001(){
+module tfslot_888_1001(width_param = width){
+
+width = width_param;
 
 translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
 
