@@ -112,8 +112,8 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
         intersection(){
             translate([0, -distance/2, 0])
                 airfoil(naca = naca, L = length, N = 100, h= width, open = false);
-            translate([0, -distance/2, 0])
-                cube([length, distance, width]);
+            //translate([0, -distance/2, 0])
+            //    cube([length, distance, width]);
         }
         intersection(){
             translate([0, -distance/2, 0])
