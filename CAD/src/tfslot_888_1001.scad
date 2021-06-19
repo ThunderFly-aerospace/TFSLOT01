@@ -34,7 +34,7 @@ sensor_sealing_nose_length = 2;
 
 pcb_width = 15;
 pcb_offset = 0;
-pcb_sensor_offset = -0.65;
+pcb_sensor_offset = 0.65;
 pcb_length = 36;
 pcb_sensor_from_top = 5;
 pcb_thickness = 3;
@@ -167,8 +167,8 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
                         //        cube([pcb_length + 0.02, sensor_rantl + pcb_thickness,
                         //              width/2 - pcb_width/2 + pcb_offset]);
                     }
-                translate([sensor_pos[0] - pcb_sensor_from_top - 2, distance/2, 0])
-                    cube([2, sensor_rantl + pcb_thickness, width]);
+                translate([sensor_pos[0] - pcb_sensor_from_top - 1, distance/2, 0])
+                    cube([1, sensor_rantl + pcb_thickness, width]);
 
             }
         }
@@ -203,7 +203,7 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
     			[3, 2, 1, 2],
     		    pipe_d, 0
             );
-            
+
             // rez anemometrem - zobrazit trubicky
             //translate([0, -20, width/2]) cube(100);
 
