@@ -98,7 +98,7 @@ curvedPipe([[10, distance/2, h],
 //pipes();
 
 
-module tfslot_888_1001(){
+module tfslot_888_1001(one_part=false){
 
 translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
 
@@ -241,20 +241,23 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
         }
     }
 
-    //  otvory pro pripevneni vicka
-    cap_bolts();
+    if(!one_part) {
 
-    union(){
-        // Rails
-        for(y = [rail_h, width - rail_h])
-            translate([length/2 + 0.01, distance/2 + sensor_rantl + pcb_thickness , y])
-                difference(){
-                    rotate([45, 0, 0])
-                        cube([length + 0.01, rail_x, rail_x], center=true);
-                }
-        // Lid front cut-out
-        translate([0, distance/2 + sensor_rantl - 3, -0.01])
-            cube([cap_head_overlay + 0.01, sensor_rantl + pcb_thickness + 0.01, width + 0.02]);
+        //  otvory pro pripevneni vicka
+        cap_bolts();
+        
+        union(){
+            // Rails
+            for(y = [rail_h, width - rail_h])
+                translate([length/2 + 0.01, distance/2 + sensor_rantl + pcb_thickness , y])
+                    difference(){
+                        rotate([45, 0, 0])
+                            cube([length + 0.01, rail_x, rail_x], center=true);
+                    }
+            // Lid front cut-out
+            translate([0, distance/2 + sensor_rantl - 3, -0.01])
+                cube([cap_head_overlay + 0.01, sensor_rantl + pcb_thickness + 0.01, width + 0.02]);
+        }
     }
     }
 }
