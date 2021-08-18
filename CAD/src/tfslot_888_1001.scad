@@ -21,7 +21,7 @@ length = 40;
 profile_thickness = surface_distance(x = 0.25, naca = naca)*length;
 
 sensor_rantl = 3;
-sensor_pos = [9, distance/2 + sensor_rantl, width/2];
+sensor_pos = [9.5, distance/2 + sensor_rantl, width/2];
 sensor_nose_distance = 4.3;
 sensor_nose_hole_depth = 2.5;
 sensor_nose_hole_diameter = 3.5;
@@ -33,10 +33,10 @@ sensor_sealing_nose_length = 2;
 // Krabicka na PCB
 
 pcb_width = 15;
-pcb_offset = 0.65;
+pcb_offset = 0;
 pcb_length = 36;
 pcb_sensor_from_top = 5;
-pcb_thickness = 3;
+pcb_thickness = 3.5;
 pcb_thickness_sensor = 3.4;
 pcb_thickness_conn = 6;
 
@@ -159,9 +159,9 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
 
             // schod pro PCB
             hull(){
-                translate([-15/2 + sensor_pos[0], distance/2, 0])
+                translate([-16/2 + sensor_pos[0], distance/2, 0])
                     cube([15, sensor_rantl, width]);
-                translate([-15/2 + sensor_pos[0], distance/2, 0])
+                translate([-16/2 + sensor_pos[0], distance/2, 0])
                     cube([20, 0.1, width]);
             }
 
@@ -170,20 +170,20 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
             // Krabicka na PCB
 
             union(){
-                translate([sensor_pos[0] - pcb_sensor_from_top, distance/2, 0])
+                translate([sensor_pos[0] - pcb_sensor_from_top - 0.5, distance/2, 0])
                     cube([pcb_length, sensor_rantl + pcb_thickness,
                           width/2 - pcb_width/2 - pcb_offset]);
-                translate([sensor_pos[0] - pcb_sensor_from_top, distance/2,
+                translate([sensor_pos[0] - pcb_sensor_from_top - 0.5, distance/2,
                            width/2 + pcb_width/2 - pcb_offset])
                     difference(){
                         cube([pcb_length, sensor_rantl + pcb_thickness,
                               width/2 - pcb_width/2 + pcb_offset]);
-                        translate([-0.01, 1, 0])
-                            rotate([-60, 0, 0])
-                                cube([pcb_length + 0.02, sensor_rantl + pcb_thickness,
-                                      width/2 - pcb_width/2 + pcb_offset]);
+//                        translate([-0.01, 1, 0])
+//                            rotate([-60, 0, 0])
+//                                cube([pcb_length + 0.02, sensor_rantl + pcb_thickness,
+//                                      width/2 - pcb_width/2 + pcb_offset]);
                     }
-                translate([sensor_pos[0] - pcb_sensor_from_top - 2, distance/2, 0])
+                translate([sensor_pos[0] - pcb_sensor_from_top - 2.5, distance/2, 0])
                     cube([2, sensor_rantl + pcb_thickness, width]);
 
             }
@@ -227,8 +227,11 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
             for(x = [0.5, -0.5])
             translate(sensor_pos + [sensor_nose_distance*x, 0, 0])
                 rotate([90, 0, 0]){
-                    cylinder(d = sensor_nose_hole_diameter, h= sensor_nose_hole_depth*2,
+                    cylinder(d = sensor_nose_hole_diameter, h= sensor_nose_hole_depth,
                              center=true, $fn = 15);
+                    translate([0, 0, sensor_nose_hole_depth/2-.01])
+                        cylinder(d2 = sensor_sealing_nose_diameter, d1 = sensor_nose_hole_diameter,
+                                 h= sensor_nose_hole_depth/2, $fn = 15);
                     translate([0, 0, sensor_nose_hole_depth])
                         cylinder(d2 = pipe_d, d1 = sensor_sealing_nose_diameter,
                                  h= sensor_sealing_nose_length, $fn = 15);
