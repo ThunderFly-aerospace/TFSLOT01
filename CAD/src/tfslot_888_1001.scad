@@ -21,7 +21,7 @@ length = 40;
 profile_thickness = surface_distance(x = 0.25, naca = naca)*length;
 
 sensor_rantl = 3;
-sensor_pos = [9, distance/2 + sensor_rantl, width/2];
+sensor_pos = [9.5, distance/2 + sensor_rantl, width/2];
 sensor_nose_distance = 4.3;
 sensor_nose_hole_depth = 2.5;
 sensor_nose_hole_diameter = 3.5;
@@ -32,12 +32,11 @@ sensor_sealing_nose_length = 2;
 
 // Krabicka na PCB
 
-pcb_width = 15;
+pcb_width = 15.2;
 pcb_offset = 0;
-pcb_sensor_offset = 0.65;
 pcb_length = 36;
 pcb_sensor_from_top = 5;
-pcb_thickness = 3;
+pcb_thickness = 3.5;
 pcb_thickness_sensor = 3.4;
 pcb_thickness_conn = 6;
 
@@ -99,7 +98,7 @@ curvedPipe([[10, distance/2, h],
 //pipes();
 
 
-module tfslot_888_1001(width_param = width){
+module tfslot_888_1001(width_param = width, one_part=false){
 
 width = width_param;
 
@@ -154,21 +153,21 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
             // Krabicka na PCB
 
             union(){
-                translate([sensor_pos[0] - pcb_sensor_from_top, distance/2, 0])
+                translate([sensor_pos[0] - pcb_sensor_from_top - 0.5, distance/2, 0])
                     cube([pcb_length, sensor_rantl + pcb_thickness,
                           width/2 - pcb_width/2 - pcb_offset]);
-                translate([sensor_pos[0] - pcb_sensor_from_top, distance/2,
+                translate([sensor_pos[0] - pcb_sensor_from_top - 0.5, distance/2,
                            width/2 + pcb_width/2 - pcb_offset])
                     difference(){
                         cube([pcb_length, sensor_rantl + pcb_thickness,
                               width/2 - pcb_width/2 + pcb_offset]);
-                        //#translate([-0.01, 1, 0])
-                        //    rotate([-60, 0, 0])
-                        //        cube([pcb_length + 0.02, sensor_rantl + pcb_thickness,
-                        //              width/2 - pcb_width/2 + pcb_offset]);
+//                        translate([-0.01, 1, 0])
+//                            rotate([-60, 0, 0])
+//                                cube([pcb_length + 0.02, sensor_rantl + pcb_thickness,
+//                                      width/2 - pcb_width/2 + pcb_offset]);
                     }
-                translate([sensor_pos[0] - pcb_sensor_from_top - 1, distance/2, 0])
-                    cube([1, sensor_rantl + pcb_thickness, width]);
+                translate([sensor_pos[0] - pcb_sensor_from_top - 2.5, distance/2, 0])
+                    cube([2, sensor_rantl + pcb_thickness, width]);
 
             }
         }
@@ -180,8 +179,8 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
             if(!$preview)
             curvedPipe([
                     sensor_pos + [sensor_nose_distance/2,
-                                  -sensor_nose_hole_depth-sensor_sealing_nose_length+0.1, pcb_sensor_offset],
-                    sensor_pos + [sensor_nose_distance/2, -5, pcb_sensor_offset/2],
+                                  -sensor_nose_hole_depth-sensor_sealing_nose_length+0.1, 0],
+                    sensor_pos + [sensor_nose_distance/2, -5, 0],
         			pipe2_pos  + [0, distance/2-6, 0],
         			pipe2_pos + [0, 0, 0]
                 ],
@@ -193,8 +192,8 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
             if(!$preview)
             curvedPipe([
                     sensor_pos + [-sensor_nose_distance/2,
-                                  -sensor_nose_hole_depth-sensor_sealing_nose_length+0.1, pcb_sensor_offset],
-                    sensor_pos + [-sensor_nose_distance/2, -7, pcb_sensor_offset/2],
+                                  -sensor_nose_hole_depth-sensor_sealing_nose_length+0.1, 0],
+                    sensor_pos + [-sensor_nose_distance/2, -7, 0],
         			pipe1_pos + [0, distance/2-4, 0],
         			pipe1_pos + [0, 0, 0],
 
@@ -203,16 +202,19 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
     			[3, 2, 1, 2],
     		    pipe_d, 0
             );
-
+            
             // rez anemometrem - zobrazit trubicky
             //translate([0, -20, width/2]) cube(100);
 
             // Vyusteni trubicky do PCB
             for(x = [0.5, -0.5])
-            translate(sensor_pos + [sensor_nose_distance*x, 0, pcb_sensor_offset])
+            translate(sensor_pos + [sensor_nose_distance*x, 0, 0])
                 rotate([90, 0, 0]){
-                    cylinder(d = sensor_nose_hole_diameter, h= sensor_nose_hole_depth*2,
+                    cylinder(d = sensor_nose_hole_diameter, h= sensor_nose_hole_depth,
                              center=true, $fn = 15);
+                    translate([0, 0, sensor_nose_hole_depth/2-.01])
+                        cylinder(d2 = sensor_sealing_nose_diameter, d1 = sensor_nose_hole_diameter,
+                                 h= sensor_nose_hole_depth/2, $fn = 15);
                     translate([0, 0, sensor_nose_hole_depth])
                         cylinder(d2 = pipe_d, d1 = sensor_sealing_nose_diameter,
                                  h= sensor_sealing_nose_length, $fn = 15);
@@ -222,22 +224,24 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
         }
     }
 
-    //  otvory pro pripevneni vicka
-    //cap_bolts();
-    cap_holes();
+    if(!one_part) {
 
-    // union(){
-    //     // Rails
-    //     for(y = [rail_h, width - rail_h])
-    //         translate([length/2 + 0.01, distance/2 + sensor_rantl + pcb_thickness , y])
-    //             difference(){
-    //                 rotate([45, 0, 0])
-    //                     cube([length + 0.01, rail_x, rail_x], center=true);
-    //             }
-    //     // Lid front cut-out
-    //     translate([0, distance/2 + sensor_rantl - 3, -0.01])
-    //         cube([cap_head_overlay + 0.01, sensor_rantl + pcb_thickness + 0.01, width + 0.02]);
-    // }
+        //  otvory pro pripevneni vicka
+        cap_bolts();
+        
+        union(){
+            // Rails
+            for(y = [rail_h, width - rail_h])
+                translate([length/2 + 0.01, distance/2 + sensor_rantl + pcb_thickness , y])
+                    difference(){
+                        rotate([45, 0, 0])
+                            cube([length + 0.01, rail_x, rail_x], center=true);
+                    }
+            // Lid front cut-out
+            translate([0, distance/2 + sensor_rantl - 3, -0.01])
+                cube([cap_head_overlay + 0.01, sensor_rantl + pcb_thickness + 0.01, width + 0.02]);
+        }
+    }
     }
 }
 
