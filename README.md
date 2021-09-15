@@ -7,10 +7,10 @@ Our [TFSLOT](https://github.com/ThunderFly-aerospace/TFSLOT01) sensor is an airs
 
 # Advantages to pitot-static tube
 
-In cotrast to classical [Pitot tube](https://en.wikipedia.org/wiki/Pitot_tube), the TFSLOT design is perfect choice for low airspeed measurement (generally bellow 20 m/s).
+In cotrast to classical [Pitot tube](https://en.wikipedia.org/wiki/Pitot_tube), the TFSLOT design is perfect choice for low airspeed measurement (generally bellow 10 m/s).
 The design has following advantages compared to pitot-probe
 
-  * Better resolution on low airspeed
+  * Better resolution on low airspeeds
   * Less tendency to clogging
   * Direct differential pressure sensor integration without any additional tubing.
 
