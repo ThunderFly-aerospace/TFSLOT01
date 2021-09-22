@@ -312,27 +312,27 @@ module tfslot_888_1002(bolts=true) translate([0, -width/2, -8]) rotate([-90, 0, 
                                 cube([length, 2*rail_h, 2*rail_h], center=true);
                         }
             }
-        // Tail cut-out
-        translate([length, 0, -width/2])
-            cube([length, length, 2*width]);
+            // Tail cut-out
+            translate([length, 0, -width/2])
+                cube([length, length, 2*width]);
             
         if(bolts) {
             // Vertical bolts cut-out
             cap_bolts();
-        }
         
-        // Horizontal bolts cut-out
-        translate([26, distance - 3, -(bolt_len - 2)])
-            rotate([0, 0, -90])
-                bolt(bolt_size, bolt_len);
-        translate([26, distance - 3, width + (bolt_len - 2)])
-            rotate([0, 180, 90])
-                bolt(bolt_size, bolt_len);
-        // Spherical cut-out
-        translate([8, distance - 3, 0])
-            sphere(d = bolt_diameter(bolt_size));
-        translate([8, distance - 3, width])
-            sphere(d = bolt_diameter(bolt_size));
+            // Horizontal bolts cut-out
+            translate([26, distance - 3, -(bolt_len - 2)])
+                rotate([0, 0, -90])
+                    bolt(bolt_size, bolt_len);
+            translate([26, distance - 3, width + (bolt_len - 2)])
+                rotate([0, 180, 90])
+                    bolt(bolt_size, bolt_len);
+            // Spherical cut-out
+            translate([8, distance - 3, 0])
+                sphere(d = bolt_diameter(bolt_size));
+            translate([8, distance - 3, width])
+                sphere(d = bolt_diameter(bolt_size));
+        }
     }
 }
 
