@@ -98,7 +98,7 @@ curvedPipe([[10, distance/2, h],
 //pipes();
 
 
-module tfslot_888_1001(one_part=false){
+module tfslot_888_1001(one_part=false, bolts=true){
 
 translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
 
@@ -240,11 +240,13 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
             }
         }
     }
-
-    if(!one_part) {
-
+    
+    if(bolts) {
         //  otvory pro pripevneni vicka
         cap_bolts();
+    }
+
+    if(!one_part) {
         
         union(){
             // Rails
@@ -288,7 +290,7 @@ module support_888_5001(){
 }
 // % support_888_5001();
 
-module tfslot_888_1002() translate([0, -width/2, -8]) rotate([-90, 0, 0]) {
+module tfslot_888_1002(bolts=true) translate([0, -width/2, -8]) rotate([-90, 0, 0]) {
     difference(){
         translate([0, distance/2 + 1, 0])
             union(){
@@ -313,8 +315,12 @@ module tfslot_888_1002() translate([0, -width/2, -8]) rotate([-90, 0, 0]) {
         // Tail cut-out
         translate([length, 0, -width/2])
             cube([length, length, 2*width]);
-        // Vertical bolts cut-out
-        cap_bolts();
+            
+        if(bolts) {
+            // Vertical bolts cut-out
+            cap_bolts();
+        }
+        
         // Horizontal bolts cut-out
         translate([26, distance - 3, -(bolt_len - 2)])
             rotate([0, 0, -90])
