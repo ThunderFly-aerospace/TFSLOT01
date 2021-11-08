@@ -25,3 +25,5 @@ sdp3x_airspeed start -X -b 2
 ```
 
 The script assumes a connection to port `I2C-2`. This can be changed with the `-b` parameter in both commands. 
+
+This approach requires firmware with modifications from the [`tf/aspdimu`](https://github.com/ThunderFly-aerospace/PX4Firmware/tree/tf/aspdimu) branch. In the future, we expect merging with upstream. 
