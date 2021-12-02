@@ -32,7 +32,7 @@ sensor_sealing_nose_length = 2;
 
 // Krabicka na PCB
 
-pcb_width = 15;
+pcb_width = 15.2;
 pcb_offset = 0;
 pcb_length = 36;
 pcb_sensor_from_top = 5;
@@ -98,7 +98,9 @@ curvedPipe([[10, distance/2, h],
 //pipes();
 
 
-module tfslot_888_1001(one_part=false, bolts=true){
+module tfslot_888_1001(width_param = width, one_part=false){
+
+width = width_param;
 
 translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
 
@@ -108,13 +110,13 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
     if(type == "naca"){
         intersection(){
             translate([0, -distance/2, 0])
-                airfoil(naca = naca, L = length, N = 50, h= width, open = false);
-            translate([0, -distance/2, 0])
-                cube([length, distance, width]);
+                airfoil(naca = naca, L = length, N = 100, h= width, open = false);
+            //translate([0, -distance/2, 0])
+            //    cube([length, distance, width]);
         }
         intersection(){
             translate([0, -distance/2, 0])
-                airfoil(naca = 0015, L = length, N = 50, h= width, open = false);
+                airfoil(naca = 0015, L = length, N = 100, h= width, open = false);
             translate([0,-distance/2, 0])
                 cube([length, distance, width]);
         }
@@ -127,41 +129,22 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
     // Spodni profil
     difference(){
         union(){
-            if(type == "naca"){
             intersection(){
                 translate([0, distance/2, 0])
-                    airfoil(naca = naca, L = length, N = 50, h= width, open = false);
-                translate([0, -distance/2, 0])
-                    cube([length, distance, width]);
-            }}
-            else{
-                difference(){
-                    translate([0, -distance/2, -2])
-                        cube([length, distance, width+4]);
-                    linear_extrude(width) polygon([
-                        //[0, -1],
-                        [0, stage1_dia/2],
-                        [stage1_len, stage1_dia/2],
-                        [stage2_pos, stage2_dia/2],
-                        [stage2_pos+stage2_len, stage2_dia/2],
-                        [length-stage3_len, stage3_dia/2],
-                        [length, stage3_dia/2],
-
-                        [length, -stage3_dia/2],
-                        [length-stage3_len, -stage3_dia/2],
-                        [stage2_pos+stage2_len, -stage2_dia/2],
-                        [stage2_pos, -stage2_dia/2],
-                        [stage1_len, -stage1_dia/2],
-                        [0, -stage1_dia/2],
-                        ]);
+                    airfoil(naca = naca, L = length, N = 100, h= width, open = false);
+                union(){
+                    translate([0, -distance/2, 0])
+                        cube([length, distance, width]);
+                    translate([])
+                        cube([3, distance*2, width]);
                 }
             }
 
             // schod pro PCB
             hull(){
-                translate([-16/2 + sensor_pos[0], distance/2, 0])
+                translate([-15/2 + sensor_pos[0], distance/2, 0])
                     cube([15, sensor_rantl, width]);
-                translate([-16/2 + sensor_pos[0], distance/2, 0])
+                translate([-15/2 + sensor_pos[0], distance/2, 0])
                     cube([20, 0.1, width]);
             }
 
@@ -223,7 +206,7 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
             // rez anemometrem - zobrazit trubicky
             //translate([0, -20, width/2]) cube(100);
 
-
+            // Vyusteni trubicky do PCB
             for(x = [0.5, -0.5])
             translate(sensor_pos + [sensor_nose_distance*x, 0, 0])
                 rotate([90, 0, 0]){
@@ -344,6 +327,18 @@ module cap_bolts() {
     translate([sensor_pos[0] + 5, bolt_z + distance/2 , width - head_diameter(bolt_size)/2])
         rotate([90, 90, 0])
             bolt(bolt_size, bolt_len);
+}
+
+
+
+module cap_holes() {
+    // Vertical bolts cut-out
+    translate([sensor_pos[0] + 5, bolt_z + distance/2 , head_diameter(bolt_size)])
+        rotate([90, -90, 0])
+            cylinder(d=2, h = 15);
+    translate([sensor_pos[0] + 5, bolt_z + distance/2 , width - head_diameter(bolt_size)])
+        rotate([90, 90, 0])
+            cylinder(d=2, h = 15);
 }
 
 tfslot_888_1002();
