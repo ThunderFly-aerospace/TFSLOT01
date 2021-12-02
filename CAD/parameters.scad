@@ -9,3 +9,6 @@ M3_nut_pocket = 5.6;
 M3_head_diameter = 6.6;
 M3_head_height = 3.0;
 
+PLASTFAST_diameter = 2.3;
+PLASTFAST_head_diameter = 6;
+
