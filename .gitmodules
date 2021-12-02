@@ -1,3 +1,6 @@
 [submodule "CAD/src/lib/stdlib"]
 	path = CAD/src/lib/stdlib
 	url = git@github.com:ThunderFly-aerospace/Openscad_stdlib.git
+[submodule "CAD/slicing/3dprinter_configs/3dprinter_configs"]
+	path = CAD/slicing/3dprinter_configs/3dprinter_configs
+	url = git@github.com:ThunderFly-aerospace/3dprinter_configs.git
