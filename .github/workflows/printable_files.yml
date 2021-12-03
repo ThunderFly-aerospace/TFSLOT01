@@ -54,6 +54,8 @@ jobs:
         path: './**/*.amf'
 
     - uses: FranzDiebold/github-env-vars-action@v2
+    
+    
 
  #   - name: Upload gcodes
  #     uses:  MLAB-project/push-generated-file@master
@@ -72,3 +74,8 @@ jobs:
 #         destination_repo: 'ThunderFly-aerospace/gcodes'
 #         target_branch:  TF-G2/${{github.ref}}/${{matrix.printer}}
 #         token: ${{ secrets.GITHUBPAT }}
+        
+    - name: publish to git        
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Automatic commit from workflow
