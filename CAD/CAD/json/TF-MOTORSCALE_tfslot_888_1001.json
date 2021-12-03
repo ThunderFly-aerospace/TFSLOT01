@@ -1,9 +1,0 @@
-{
-    "cog": {},
-    "files": {
-        "scad": "/home/runner/work/TFSLOT01/TFSLOT01/CAD/src/printplate/tfslot_888_1001.scad",
-        "amf": "/home/runner/work/TFSLOT01/TFSLOT01/CAD/CAD/amf/tfslot_888_1001.amf",
-        "stl": "/home/runner/work/TFSLOT01/TFSLOT01/CAD/CAD/stl/tfslot_888_1001.stl",
-        "gcode": "/home/runner/work/TFSLOT01/TFSLOT01/CAD/CAD/gcode/TF-MOTORSCALE_tfslot_888_1001.gcode"
-    }
-}
