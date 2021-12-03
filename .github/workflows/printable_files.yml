@@ -46,7 +46,7 @@ jobs:
 
     - name: Make
       run: |
-        cd CAD/src/; make
+        cd CAD/src/; make; mv CAD/gcode CAD/${{matrix.printer}}/gcode
 
     - name: Upload a AMF Artifact
       uses: actions/upload-artifact@v2.2.2
