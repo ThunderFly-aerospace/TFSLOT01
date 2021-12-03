@@ -219,7 +219,6 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
     }
 
     if(cap_hole) {
-        
         union(){
             // Rails
             for(y = [rail_h, width - rail_h])
