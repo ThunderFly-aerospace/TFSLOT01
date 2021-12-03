@@ -103,6 +103,10 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
 
 // Horni profil
     union(){
+        
+        translate([length-2, -distance/2, 0]) cube([2, 0.1, width]);
+        translate([length-2, distance/2, 0]) cube([2, 0.1, width]);
+        
         translate([0, -distance/2, 0])
             airfoil(naca = naca, L = length, N = 100, h= width, open = false);
         
@@ -226,8 +230,8 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
                     cube([length, rail_x, rail_x], center=true);
             
             for(y = [rail_h, width - rail_h])
-                translate([0, distance/2 + sensor_rantl+0.5 , y])
-                    rotate([0, 0, 45]) cube([10, rail_x, rail_x], center=true);
+                translate([3, distance/2 , y - rail_x/2])
+                    rotate([0, 0, 45]) cube([10, rail_x, rail_x]);
             
             translate([0, distance/2 + sensor_rantl + 2, width/2])
                 rotate([0, 0, 45]) cube([10, rail_x, width], center=true);
@@ -259,14 +263,17 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) {
                     }
                     // Bottom cut-out
                     difference(){
-                        translate([cap_head_overlay - global_clearance, -length + 6.6, rail_h*2])
+                        translate([cap_head_overlay - 0.4, -length + 6.6, rail_h*2])
                             cube([length, length, width-rail_h*4]);
                         translate([cap_head_overlay, 7.3, width/2])
                            rotate([0, 0, 45]) cube([10, 3, width-rail_h*4], center=true);
                     }
-                    translate([cap_head_overlay - global_clearance, -length + 4.4, 0])
-                        cube([length, length, width]);
-                    
+                    difference(){
+                        translate([cap_head_overlay - 0.4, -length + 4.4, -0.5])
+                            cube([length, length, width+1]);
+                        translate([2, 6.5, width/2])
+                           rotate([0, 0, 45]) cube([10, 10, width], center=true);
+                    }
                     // spodni orez predniho rantlu
                     translate([0, -10+0.1, -0.5])
                         cube([length, 10, width+1]);
@@ -296,7 +303,10 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) {
 
 module tfslot_888_1002_support(){
     step = 3;
-    translate([step, -width/2, -12]) cube([length-step, width, 3]);
+    
+    translate([40, -width/2, -distance/2-5]) rotate([0, -90, 0]) cylinder(d=8, h=0.3);
+    translate([40, width/2, -distance/2-5]) rotate([0, -90, 0]) cylinder(d=8, h=0.3); 
+    //translate([step, -width/2, -12]) cube([length-step, width, 3]);
 }
 
 
