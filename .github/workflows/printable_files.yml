@@ -5,6 +5,7 @@ on:
     paths:
       - '**.scad'
       - '**.ini'
+      - '**.yml'
     branches:
      - '*'
   workflow_dispatch:
@@ -74,8 +75,13 @@ jobs:
 #         destination_repo: 'ThunderFly-aerospace/gcodes'
 #         target_branch:  TF-G2/${{github.ref}}/${{matrix.printer}}
 #         token: ${{ secrets.GITHUBPAT }}
+    
+    - name: pull
+      run: git pull
         
     - name: publish to git        
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: Automatic commit from workflow
+        commit_user_name: TFbot
+        
