@@ -240,7 +240,7 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
     }
 }
 
-%tfslot_888_1001(one_part=true, plastfast_screw = 20, cap_hole = 1);
+//tfslot_888_1001(one_part=true, plastfast_screw = 20, cap_hole = 1);
 
 
 
@@ -294,26 +294,9 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) {
 }
 }
 
-module cap_bolts() {
-    // Vertical bolts cut-out
-    translate([sensor_pos[0] + 5, bolt_z + distance/2 , head_diameter(bolt_size)/2])
-        rotate([90, -90, 0])
-            bolt(bolt_size, bolt_len);
-    translate([sensor_pos[0] + 5, bolt_z + distance/2 , width - head_diameter(bolt_size)/2])
-        rotate([90, 90, 0])
-            bolt(bolt_size, bolt_len);
-}
-
-
-
-module cap_holes() {
-    // Vertical bolts cut-out
-    translate([sensor_pos[0] + 5, bolt_z + distance/2 , head_diameter(bolt_size)])
-        rotate([90, -90, 0])
-            cylinder(d=2, h = 15);
-    translate([sensor_pos[0] + 5, bolt_z + distance/2 , width - head_diameter(bolt_size)])
-        rotate([90, 90, 0])
-            cylinder(d=2, h = 15);
+module tfslot_888_1002_support(){
+    step = 3;
+    translate([step, -width/2, -12]) cube([length-step, width, 3]);
 }
 
 
@@ -323,3 +306,5 @@ translate([0, 0, 0])
 translate([0, 110, 0])
     cube(200, center=true);
 }
+
+tfslot_888_1002_support();
