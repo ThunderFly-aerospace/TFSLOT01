@@ -304,8 +304,8 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) {
 module tfslot_888_1002_support(){
     step = 3;
     
-    translate([40, -width/2, -distance/2-5]) rotate([0, -90, 0]) cylinder(d=8, h=0.3);
-    translate([40, width/2, -distance/2-5]) rotate([0, -90, 0]) cylinder(d=8, h=0.3); 
+    translate([40, -width/2, -distance/2-5]) rotate([0, -90, 0]) cylinder(d=8, h=0.2);
+    translate([40, width/2, -distance/2-5]) rotate([0, -90, 0]) cylinder(d=8, h=0.2); 
     //translate([step, -width/2, -12]) cube([length-step, width, 3]);
 }
 

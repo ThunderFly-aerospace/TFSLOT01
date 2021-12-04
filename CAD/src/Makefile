@@ -7,7 +7,7 @@ SRC_DIR=printplate
 # INI_DIR=../../slicing
 GIT_ROOT=../../
 OUTPUT_FOLDER=.
-NAME_PREFIX=TF-MOTORSCALE
+NAME_PREFIX=TFSLOT01
 PROCESSOR3D_PARAM=--force --no_stl
 
 include ../../utils/Makefile
