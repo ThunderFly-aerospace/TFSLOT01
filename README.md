@@ -6,7 +6,7 @@ Our [TFSLOT](https://github.com/ThunderFly-aerospace/TFSLOT01) sensor is an airs
 
 
 
-TFSLOT is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/), write an email to info@thunderfly.cz or shop at [Tindie store]().
+TFSLOT is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/), write an email to info@thunderfly.cz or shop at [Tindie store](https://www.tindie.com/stores/thunderfly/).
 
 # Advantages to pitot-static tube
 
