@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-21.10
     strategy:
       matrix:
         printer: [mini_prusaslicer_quality, mini, edee, mlab3d]
