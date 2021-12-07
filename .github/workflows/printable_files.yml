@@ -33,8 +33,8 @@ jobs:
 
     - name: Install requirements
       run: |
-        sudo apt-get update
-        sudo apt-get install libglu1-mesa
+        # sudo apt-get update
+        sudo apt-get install libglu1-mesa libgtk2.0-0
         # wget --progress=bar:force:noscroll https://dl.slic3r.org/linux/Slic3r-1.3.0-x86_64.AppImage -O ~/Slic3r.AppImage
         # chmod +x ~/Slic3r.AppImage
         wget --progress=bar:force:noscroll https://github.com/prusa3d/PrusaSlicer/releases/download/version_2.2.0/PrusaSlicer-2.2.0+linux-x64-202003211856.AppImage -O ~/PrusaSlicer.AppImage
