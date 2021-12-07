@@ -39,6 +39,7 @@ jobs:
         # chmod +x ~/Slic3r.AppImage
         wget --progress=bar:force:noscroll https://github.com/prusa3d/PrusaSlicer/releases/download/version_2.2.0/PrusaSlicer-2.2.0+linux-x64-202003211856.AppImage -O ~/PrusaSlicer.AppImage
         chmod +x ~/PrusaSlicer.AppImage
+        ./PrusaSlicer.AppImage --help
         wget --progress=bar:force:noscroll https://files.openscad.org/OpenSCAD-2021.01-x86_64.AppImage -O ~/OpenSCAD.AppImage
         chmod +x ~/OpenSCAD.AppImage
         sudo apt-get install libc-bin python3-setuptools xvfb
