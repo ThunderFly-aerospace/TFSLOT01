@@ -49,11 +49,11 @@ jobs:
 
     - name: Make
       run: |
-        mkdir Manufacturing/${{matrix.printer}}/amf 2> /dev/null
-        mkdir Manufacturing/${{matrix.printer}}/json 2> /dev/null
-        mkdir Manufacturing/${{matrix.printer}}/stl 2> /dev/null
-        mkdir Manufacturing/${{matrix.printer}}/png 2> /dev/null
-        mkdir Manufacturing/${{matrix.printer}}/gcode 2> /dev/null
+        mkdir -p Manufacturing/${{matrix.printer}}/amf 2> /dev/null
+        mkdir -p Manufacturing/${{matrix.printer}}/json 2> /dev/null
+        mkdir -p Manufacturing/${{matrix.printer}}/stl 2> /dev/null
+        mkdir -p Manufacturing/${{matrix.printer}}/png 2> /dev/null
+        mkdir -p Manufacturing/${{matrix.printer}}/gcode 2> /dev/null
         cd CAD/src/; make
 
     - name: Upload a Manufactunirg data
