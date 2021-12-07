@@ -1,0 +1,15 @@
+{
+    "cog": {
+        "gcode": {
+            "X": 71.8617,
+            "Y": 72.2533,
+            "Z": 26.6829
+        }
+    },
+    "files": {
+        "scad": "/home/roman/repos/tf/TFSLOT01/CAD/src/printplate/tfslot_888_1002.scad",
+        "amf": "/home/roman/repos/tf/TFSLOT01/Manufacturing/mini_prusaslicer_quality/amf/tfslot_888_1002.amf",
+        "stl": "/home/roman/repos/tf/TFSLOT01/Manufacturing/mini_prusaslicer_quality/stl/tfslot_888_1002.stl",
+        "gcode": "/home/roman/repos/tf/TFSLOT01/Manufacturing/mini_prusaslicer_quality/gcode/TFSLOT01_tfslot_888_1002.gcode"
+    }
+}
