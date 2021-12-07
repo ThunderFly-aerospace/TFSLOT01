@@ -54,6 +54,7 @@ jobs:
         mkdir -p Manufacturing/${{matrix.printer}}/stl 2> /dev/null
         mkdir -p Manufacturing/${{matrix.printer}}/png 2> /dev/null
         mkdir -p Manufacturing/${{matrix.printer}}/gcode 2> /dev/null
+        tree /home/runner/work/TFSLOT01/TFSLOT01
         cd CAD/src/; make
 
     - name: Upload a Manufactunirg data
