@@ -1,6 +1,6 @@
 # TFSLOT01
 
-![TFSLOT01A prototype](doc/img/TFSLOT01A.jpg)
+![TFSLOT01A prototype](doc/img/TFSLOT_1_small.jpg)
 
 Our [TFSLOT](https://github.com/ThunderFly-aerospace/TFSLOT01) sensor is an airspeed sensor designed to use on UAVs. Due to 3D printed case it is possible to optimize the characteristics according to the location of sensor on UAV and specific application. First use of this sensor is on ThunderFly autogyro [TF-G2](https://github.com/ThunderFly-aerospace/TF-G2/).
 
