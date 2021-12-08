@@ -3475,11 +3475,6 @@
     </coordinates></vertex>
     <vertex><coordinates>
      <x>5.5</x>
-     <y>9.10089</y>
-     <z>-9.28299</z>
-    </coordinates></vertex>
-    <vertex><coordinates>
-     <x>5.5</x>
      <y>8.87883</y>
      <z>-9.7441</z>
     </coordinates></vertex>
@@ -3487,6 +3482,11 @@
      <x>5.5</x>
      <y>8.87883</y>
      <z>-10.2559</z>
+    </coordinates></vertex>
+    <vertex><coordinates>
+     <x>5.5</x>
+     <y>9.10089</y>
+     <z>-9.28299</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>5.5</x>
@@ -19153,31 +19153,31 @@
     <triangle>
      <v1>694</v1>
      <v2>695</v2>
-     <v3>469</v3>
-    </triangle>
-    <triangle>
-     <v1>469</v1>
-     <v2>695</v2>
-     <v3>458</v3>
-    </triangle>
-    <triangle>
-     <v1>695</v1>
-     <v2>696</v2>
      <v3>458</v3>
     </triangle>
     <triangle>
      <v1>458</v1>
-     <v2>696</v2>
+     <v2>695</v2>
      <v3>457</v3>
     </triangle>
     <triangle>
-     <v1>697</v1>
+     <v1>696</v1>
      <v2>694</v2>
+     <v3>469</v3>
+    </triangle>
+    <triangle>
+     <v1>469</v1>
+     <v2>694</v2>
+     <v3>458</v3>
+    </triangle>
+    <triangle>
+     <v1>697</v1>
+     <v2>696</v2>
      <v3>456</v3>
     </triangle>
     <triangle>
      <v1>456</v1>
-     <v2>694</v2>
+     <v2>696</v2>
      <v3>469</v3>
     </triangle>
     <triangle>
@@ -19283,10 +19283,10 @@
     <triangle>
      <v1>707</v1>
      <v2>461</v2>
-     <v3>696</v3>
+     <v3>695</v3>
     </triangle>
     <triangle>
-     <v1>696</v1>
+     <v1>695</v1>
      <v2>461</v2>
      <v3>457</v3>
     </triangle>
@@ -21071,64 +21071,64 @@
      <v3>682</v3>
     </triangle>
     <triangle>
-     <v1>694</v1>
+     <v1>696</v1>
      <v2>697</v2>
-     <v3>695</v3>
+     <v3>694</v3>
     </triangle>
     <triangle>
-     <v1>695</v1>
+     <v1>694</v1>
      <v2>697</v2>
      <v3>698</v3>
     </triangle>
     <triangle>
-     <v1>695</v1>
+     <v1>694</v1>
      <v2>698</v2>
      <v3>699</v3>
     </triangle>
     <triangle>
-     <v1>695</v1>
+     <v1>694</v1>
      <v2>699</v2>
      <v3>700</v3>
     </triangle>
     <triangle>
-     <v1>695</v1>
+     <v1>694</v1>
      <v2>700</v2>
      <v3>701</v3>
     </triangle>
     <triangle>
-     <v1>695</v1>
+     <v1>694</v1>
      <v2>701</v2>
      <v3>702</v3>
     </triangle>
     <triangle>
-     <v1>695</v1>
+     <v1>694</v1>
      <v2>702</v2>
      <v3>703</v3>
     </triangle>
     <triangle>
-     <v1>695</v1>
+     <v1>694</v1>
      <v2>703</v2>
      <v3>704</v3>
     </triangle>
     <triangle>
-     <v1>695</v1>
+     <v1>694</v1>
      <v2>704</v2>
      <v3>705</v3>
     </triangle>
     <triangle>
-     <v1>695</v1>
+     <v1>694</v1>
      <v2>705</v2>
      <v3>706</v3>
     </triangle>
     <triangle>
-     <v1>695</v1>
+     <v1>694</v1>
      <v2>706</v2>
      <v3>707</v3>
     </triangle>
     <triangle>
-     <v1>695</v1>
+     <v1>694</v1>
      <v2>707</v2>
-     <v3>696</v3>
+     <v3>695</v3>
     </triangle>
     <triangle>
      <v1>840</v1>
@@ -36706,11 +36706,6 @@
      <v3>2197</v3>
     </triangle>
     <triangle>
-     <v1>2212</v1>
-     <v2>2217</v2>
-     <v3>2445</v3>
-    </triangle>
-    <triangle>
      <v1>2217</v1>
      <v2>2221</v2>
      <v3>2445</v3>
@@ -36719,6 +36714,11 @@
      <v1>2445</v1>
      <v2>2221</v2>
      <v3>2446</v3>
+    </triangle>
+    <triangle>
+     <v1>2212</v1>
+     <v2>2217</v2>
+     <v3>2445</v3>
     </triangle>
     <triangle>
      <v1>2221</v1>
@@ -40005,293 +40005,159 @@
  <metadata type="slic3r.adaptive_slicing">0</metadata>
 <metadata type="slic3r.adaptive_slicing_quality">90%</metadata>
 <metadata type="slic3r.avoid_crossing_perimeters">0</metadata>
-<metadata type="slic3r.avoid_crossing_perimeters_max_detour">0</metadata>
-<metadata type="slic3r.bed_shape">0x0,180x0,180x180,0x180</metadata>
-<metadata type="slic3r.bed_temperature">60</metadata>
-<metadata type="slic3r.before_layer_gcode">;BEFORE_LAYER_CHANGE\nG92 E0.0\n;[layer_z]\n\n</metadata>
-<metadata type="slic3r.bottom_fill_pattern">monotonic</metadata>
+<metadata type="slic3r.bed_shape">0x0,150x0,150x150,0x150</metadata>
+<metadata type="slic3r.bed_temperature">0</metadata>
 <metadata type="slic3r.bottom_infill_pattern">rectilinear</metadata>
 <metadata type="slic3r.bottom_solid_layers">5</metadata>
-<metadata type="slic3r.bottom_solid_min_thickness">0.5</metadata>
-<metadata type="slic3r.bridge_acceleration">1000</metadata>
-<metadata type="slic3r.bridge_angle">0</metadata>
+<metadata type="slic3r.bridge_acceleration">0</metadata>
 <metadata type="slic3r.bridge_fan_speed">100</metadata>
 <metadata type="slic3r.bridge_flow_ratio">1</metadata>
-<metadata type="slic3r.bridge_speed">25</metadata>
+<metadata type="slic3r.bridge_speed">40</metadata>
 <metadata type="slic3r.brim_connections_width">0</metadata>
 <metadata type="slic3r.brim_ears">0</metadata>
 <metadata type="slic3r.brim_ears_max_angle">125</metadata>
-<metadata type="slic3r.brim_separation">0.1</metadata>
-<metadata type="slic3r.brim_type">no_brim</metadata>
 <metadata type="slic3r.brim_width">0</metadata>
-<metadata type="slic3r.clip_multipart_objects">1</metadata>
-<metadata type="slic3r.color_change_gcode">M600</metadata>
-<metadata type="slic3r.compatible_printers_condition_cummulative">"printer_notes=~/.*PRINTER_VENDOR_PRUSA3D.*/ and printer_notes=~/.*PRINTER_MODEL_MINI.*/ and nozzle_diameter[0]==0.4";"nozzle_diameter[0]!=0.8 and ! (printer_notes=~/.*PRINTER_VENDOR_PRUSA3D.*/ and printer_notes=~/.*PRINTER_MODEL_MK(2.5|3).*/ and single_extruder_multi_material)"</metadata>
 <metadata type="slic3r.complete_objects">0</metadata>
 <metadata type="slic3r.cooling">1</metadata>
-<metadata type="slic3r.cooling_tube_length">5</metadata>
-<metadata type="slic3r.cooling_tube_retraction">91.5</metadata>
-<metadata type="slic3r.default_acceleration">1000</metadata>
-<metadata type="slic3r.default_filament_profile">"Prusament PLA"</metadata>
-<metadata type="slic3r.default_print_profile">0.15mm QUALITY @MINI</metadata>
-<metadata type="slic3r.deretract_speed">40</metadata>
-<metadata type="slic3r.disable_fan_first_layers">1</metadata>
-<metadata type="slic3r.dont_support_bridges">0</metadata>
-<metadata type="slic3r.draft_shield">disabled</metadata>
+<metadata type="slic3r.default_acceleration">0</metadata>
+<metadata type="slic3r.disable_fan_first_layers">4</metadata>
+<metadata type="slic3r.dont_support_bridges">1</metadata>
 <metadata type="slic3r.duplicate_distance">6</metadata>
-<metadata type="slic3r.elefant_foot_compensation">0.2</metadata>
-<metadata type="slic3r.end_filament_gcode">"; Filament-specific end gcode"</metadata>
-<metadata type="slic3r.end_gcode">G1 E-1 F2100 ; retract\n{if max_layer_z &lt; max_print_height}G1 Z{z_offset+min(max_layer_z+2, max_print_height)} F720 ; Move print head up{endif}\nG1 X178 Y178 F4200 ; park print head\n{if max_layer_z &lt; max_print_height}G1 Z{z_offset+min(max_layer_z+30, max_print_height)} F720 ; Move print head further up{endif}\nG4 ; wait\nM104 S0 ; turn off temperature\nM140 S0 ; turn off heatbed\nM107 ; turn off fan\nM221 S100 ; reset flow\nM900 K0 ; reset LA\nM84 ; disable motors</metadata>
-<metadata type="slic3r.ensure_vertical_shell_thickness">1</metadata>
-<metadata type="slic3r.external_perimeter_extrusion_width">0.45</metadata>
-<metadata type="slic3r.external_perimeter_speed">30</metadata>
+<metadata type="slic3r.end_filament_gcode">"; Filament-specific end gcode \n;END gcode for filament\n"</metadata>
+<metadata type="slic3r.end_gcode">M104 S0\nM140 S0\n;Retract the filament\nG92 E1\nG1 E-1 F300\n G91 \n G1 Z5 F300 \n; End of Gcode</metadata>
+<metadata type="slic3r.external_perimeter_extrusion_width">0</metadata>
+<metadata type="slic3r.external_perimeter_speed">90%</metadata>
 <metadata type="slic3r.external_perimeters_first">0</metadata>
-<metadata type="slic3r.extra_loading_move">-2</metadata>
-<metadata type="slic3r.extra_perimeters">0</metadata>
+<metadata type="slic3r.extra_perimeters">1</metadata>
 <metadata type="slic3r.extruder_clearance_height">20</metadata>
-<metadata type="slic3r.extruder_clearance_radius">35</metadata>
-<metadata type="slic3r.extruder_colour">""</metadata>
+<metadata type="slic3r.extruder_clearance_radius">20</metadata>
 <metadata type="slic3r.extruder_offset">0x0</metadata>
 <metadata type="slic3r.extrusion_axis">E</metadata>
-<metadata type="slic3r.extrusion_multiplier">1</metadata>
-<metadata type="slic3r.extrusion_width">0.45</metadata>
+<metadata type="slic3r.extrusion_multiplier">0.93</metadata>
+<metadata type="slic3r.extrusion_width">0</metadata>
 <metadata type="slic3r.fan_always_on">1</metadata>
-<metadata type="slic3r.fan_below_layer_time">100</metadata>
+<metadata type="slic3r.fan_below_layer_time">30</metadata>
 <metadata type="slic3r.fan_percentage">0</metadata>
-<metadata type="slic3r.filament_colour">#FF8000</metadata>
-<metadata type="slic3r.filament_cooling_final_speed">3.4</metadata>
-<metadata type="slic3r.filament_cooling_initial_speed">2.2</metadata>
-<metadata type="slic3r.filament_cooling_moves">4</metadata>
-<metadata type="slic3r.filament_cost">30.24</metadata>
+<metadata type="slic3r.filament_colour">#FFFFFF</metadata>
+<metadata type="slic3r.filament_cost">0</metadata>
 <metadata type="slic3r.filament_density">1.24</metadata>
-<metadata type="slic3r.filament_deretract_speed">nil</metadata>
 <metadata type="slic3r.filament_diameter">1.75</metadata>
-<metadata type="slic3r.filament_load_time">0</metadata>
-<metadata type="slic3r.filament_loading_speed">28</metadata>
-<metadata type="slic3r.filament_loading_speed_start">3</metadata>
-<metadata type="slic3r.filament_max_volumetric_speed">15</metadata>
-<metadata type="slic3r.filament_minimal_purge_on_wipe_tower">15</metadata>
-<metadata type="slic3r.filament_notes">"Affordable filament for everyday printing in premium quality manufactured in-house by Josef Prusa"</metadata>
-<metadata type="slic3r.filament_ramming_parameters">"120 100 6.6 6.8 7.2 7.6 7.9 8.2 8.7 9.4 9.9 10.0| 0.05 6.6 0.45 6.8 0.95 7.8 1.45 8.3 1.95 9.7 2.45 10 2.95 7.6 3.45 7.6 3.95 7.6 4.45 7.6 4.95 7.6"</metadata>
-<metadata type="slic3r.filament_retract_before_travel">nil</metadata>
-<metadata type="slic3r.filament_retract_before_wipe">nil</metadata>
-<metadata type="slic3r.filament_retract_layer_change">nil</metadata>
-<metadata type="slic3r.filament_retract_length">nil</metadata>
-<metadata type="slic3r.filament_retract_lift">nil</metadata>
-<metadata type="slic3r.filament_retract_lift_above">nil</metadata>
-<metadata type="slic3r.filament_retract_lift_below">nil</metadata>
-<metadata type="slic3r.filament_retract_restart_extra">nil</metadata>
-<metadata type="slic3r.filament_retract_speed">nil</metadata>
-<metadata type="slic3r.filament_settings_id">"Prusament PLA"</metadata>
-<metadata type="slic3r.filament_soluble">0</metadata>
-<metadata type="slic3r.filament_spool_weight">201</metadata>
-<metadata type="slic3r.filament_toolchange_delay">0</metadata>
-<metadata type="slic3r.filament_type">PLA</metadata>
-<metadata type="slic3r.filament_unload_time">0</metadata>
-<metadata type="slic3r.filament_unloading_speed">90</metadata>
-<metadata type="slic3r.filament_unloading_speed_start">100</metadata>
-<metadata type="slic3r.filament_vendor">Prusa Polymers</metadata>
-<metadata type="slic3r.filament_wipe">nil</metadata>
+<metadata type="slic3r.filament_max_volumetric_speed">0</metadata>
 <metadata type="slic3r.fill_angle">45</metadata>
-<metadata type="slic3r.fill_density">20%</metadata>
+<metadata type="slic3r.fill_density">10%</metadata>
 <metadata type="slic3r.fill_gaps">1</metadata>
 <metadata type="slic3r.fill_pattern">cubic</metadata>
-<metadata type="slic3r.first_layer_acceleration">800</metadata>
-<metadata type="slic3r.first_layer_acceleration_over_raft">0</metadata>
-<metadata type="slic3r.first_layer_bed_temperature">60</metadata>
-<metadata type="slic3r.first_layer_extrusion_width">0.42</metadata>
-<metadata type="slic3r.first_layer_height">0.2</metadata>
-<metadata type="slic3r.first_layer_speed">20</metadata>
-<metadata type="slic3r.first_layer_speed_over_raft">30</metadata>
+<metadata type="slic3r.first_layer_acceleration">0</metadata>
+<metadata type="slic3r.first_layer_bed_temperature">0</metadata>
+<metadata type="slic3r.first_layer_extrusion_width">150%</metadata>
+<metadata type="slic3r.first_layer_height">0.3</metadata>
+<metadata type="slic3r.first_layer_speed">30</metadata>
 <metadata type="slic3r.first_layer_temperature">215</metadata>
-<metadata type="slic3r.full_fan_speed_layer">4</metadata>
-<metadata type="slic3r.fuzzy_skin">none</metadata>
-<metadata type="slic3r.fuzzy_skin_point_dist">0.8</metadata>
-<metadata type="slic3r.fuzzy_skin_thickness">0.3</metadata>
-<metadata type="slic3r.gap_fill_enabled">1</metadata>
-<metadata type="slic3r.gap_fill_speed">40</metadata>
+<metadata type="slic3r.gap_fill_speed">20</metadata>
 <metadata type="slic3r.gcode_arcs">0</metadata>
 <metadata type="slic3r.gcode_comments">0</metadata>
-<metadata type="slic3r.gcode_flavor">marlin2</metadata>
-<metadata type="slic3r.gcode_label_objects">0</metadata>
-<metadata type="slic3r.gcode_resolution">0.0125</metadata>
+<metadata type="slic3r.gcode_flavor">reprap</metadata>
 <metadata type="slic3r.has_heatbed">0</metadata>
-<metadata type="slic3r.high_current_on_filament_swap">0</metadata>
 <metadata type="slic3r.host_type">octoprint</metadata>
-<metadata type="slic3r.infill_acceleration">1000</metadata>
-<metadata type="slic3r.infill_anchor">2.5</metadata>
-<metadata type="slic3r.infill_anchor_max">12</metadata>
+<metadata type="slic3r.infill_acceleration">0</metadata>
 <metadata type="slic3r.infill_every_layers">1</metadata>
 <metadata type="slic3r.infill_extruder">1</metadata>
-<metadata type="slic3r.infill_extrusion_width">0.45</metadata>
+<metadata type="slic3r.infill_extrusion_width">0</metadata>
 <metadata type="slic3r.infill_first">0</metadata>
 <metadata type="slic3r.infill_only_where_needed">0</metadata>
-<metadata type="slic3r.infill_overlap">25%</metadata>
-<metadata type="slic3r.infill_speed">80</metadata>
+<metadata type="slic3r.infill_overlap">115%</metadata>
+<metadata type="slic3r.infill_speed">40</metadata>
 <metadata type="slic3r.interface_shells">0</metadata>
 <metadata type="slic3r.interior_brim_width">0</metadata>
-<metadata type="slic3r.ironing">0</metadata>
-<metadata type="slic3r.ironing_flowrate">15%</metadata>
-<metadata type="slic3r.ironing_spacing">0.1</metadata>
-<metadata type="slic3r.ironing_speed">15</metadata>
-<metadata type="slic3r.ironing_type">top</metadata>
 <metadata type="slic3r.label_printed_objects">0</metadata>
-<metadata type="slic3r.layer_gcode">;AFTER_LAYER_CHANGE\n;[layer_z]</metadata>
-<metadata type="slic3r.layer_height">0.15</metadata>
-<metadata type="slic3r.machine_limits_usage">emit_to_gcode</metadata>
-<metadata type="slic3r.machine_max_acceleration_e">5000</metadata>
-<metadata type="slic3r.machine_max_acceleration_extruding">1250</metadata>
-<metadata type="slic3r.machine_max_acceleration_retracting">1250</metadata>
-<metadata type="slic3r.machine_max_acceleration_travel">2500</metadata>
-<metadata type="slic3r.machine_max_acceleration_x">2500</metadata>
-<metadata type="slic3r.machine_max_acceleration_y">2500</metadata>
-<metadata type="slic3r.machine_max_acceleration_z">400</metadata>
-<metadata type="slic3r.machine_max_feedrate_e">80</metadata>
-<metadata type="slic3r.machine_max_feedrate_x">180</metadata>
-<metadata type="slic3r.machine_max_feedrate_y">180</metadata>
-<metadata type="slic3r.machine_max_feedrate_z">12</metadata>
-<metadata type="slic3r.machine_max_jerk_e">10</metadata>
-<metadata type="slic3r.machine_max_jerk_x">8</metadata>
-<metadata type="slic3r.machine_max_jerk_y">8</metadata>
-<metadata type="slic3r.machine_max_jerk_z">2</metadata>
-<metadata type="slic3r.machine_min_extruding_rate">0</metadata>
-<metadata type="slic3r.machine_min_travel_rate">0</metadata>
+<metadata type="slic3r.layer_height">0.2</metadata>
 <metadata type="slic3r.match_horizontal_surfaces">0</metadata>
 <metadata type="slic3r.max_fan_speed">100</metadata>
-<metadata type="slic3r.max_layer_height">0.25</metadata>
-<metadata type="slic3r.max_print_height">180</metadata>
-<metadata type="slic3r.max_print_speed">150</metadata>
+<metadata type="slic3r.max_layer_height">0.3</metadata>
+<metadata type="slic3r.max_print_speed">80</metadata>
 <metadata type="slic3r.max_volumetric_speed">0</metadata>
 <metadata type="slic3r.min_fan_speed">100</metadata>
-<metadata type="slic3r.min_layer_height">0.07</metadata>
-<metadata type="slic3r.min_print_speed">15</metadata>
+<metadata type="slic3r.min_layer_height">0.15</metadata>
+<metadata type="slic3r.min_print_speed">10</metadata>
 <metadata type="slic3r.min_shell_thickness">0.8</metadata>
-<metadata type="slic3r.min_skirt_length">40</metadata>
+<metadata type="slic3r.min_skirt_length">0</metadata>
 <metadata type="slic3r.min_top_bottom_shell_thickness">1.2</metadata>
-<metadata type="slic3r.mmu_segmented_region_max_width">0</metadata>
 <metadata type="slic3r.nozzle_diameter">0.4</metadata>
 <metadata type="slic3r.only_retract_when_crossing_perimeters">0</metadata>
 <metadata type="slic3r.ooze_prevention">0</metadata>
-<metadata type="slic3r.output_filename_format">{input_filename_base}.gcode</metadata>
+<metadata type="slic3r.output_filename_format">[input_filename_base].gcode</metadata>
 <metadata type="slic3r.overhangs">1</metadata>
-<metadata type="slic3r.parking_pos_retraction">92</metadata>
-<metadata type="slic3r.pause_print_gcode">M601</metadata>
-<metadata type="slic3r.perimeter_acceleration">800</metadata>
+<metadata type="slic3r.perimeter_acceleration">0</metadata>
 <metadata type="slic3r.perimeter_extruder">1</metadata>
-<metadata type="slic3r.perimeter_extrusion_width">0.45</metadata>
+<metadata type="slic3r.perimeter_extrusion_width">0</metadata>
 <metadata type="slic3r.perimeter_speed">40</metadata>
-<metadata type="slic3r.perimeters">2</metadata>
+<metadata type="slic3r.perimeters">3</metadata>
 <metadata type="slic3r.pressure_advance">0</metadata>
-<metadata type="slic3r.print_settings_id">0.15mm QUALITY @MINI</metadata>
-<metadata type="slic3r.printer_model">MINI</metadata>
-<metadata type="slic3r.printer_notes">Don't remove the following keywords! These keywords are used in the "compatible printer" condition of the print and filament profiles to link the particular print and filament profiles to this printer profile.\nPRINTER_VENDOR_PRUSA3D\nPRINTER_MODEL_MINI\n</metadata>
-<metadata type="slic3r.printer_settings_id">Original Prusa MINI &amp; MINI+</metadata>
-<metadata type="slic3r.printer_technology">FFF</metadata>
-<metadata type="slic3r.printer_variant">0.4</metadata>
-<metadata type="slic3r.raft_contact_distance">0.2</metadata>
-<metadata type="slic3r.raft_expansion">1.5</metadata>
-<metadata type="slic3r.raft_first_layer_density">90%</metadata>
-<metadata type="slic3r.raft_first_layer_expansion">3</metadata>
 <metadata type="slic3r.raft_layers">0</metadata>
 <metadata type="slic3r.regions_overlap">0</metadata>
-<metadata type="slic3r.remaining_times">1</metadata>
 <metadata type="slic3r.resolution">0</metadata>
-<metadata type="slic3r.retract_before_travel">1.5</metadata>
-<metadata type="slic3r.retract_before_wipe">70%</metadata>
-<metadata type="slic3r.retract_layer_change">1</metadata>
-<metadata type="slic3r.retract_length">3.2</metadata>
-<metadata type="slic3r.retract_length_toolchange">4</metadata>
-<metadata type="slic3r.retract_lift">0.2</metadata>
+<metadata type="slic3r.retract_before_travel">2</metadata>
+<metadata type="slic3r.retract_layer_change">0</metadata>
+<metadata type="slic3r.retract_length">2</metadata>
+<metadata type="slic3r.retract_length_toolchange">10</metadata>
+<metadata type="slic3r.retract_lift">0</metadata>
 <metadata type="slic3r.retract_lift_above">0</metadata>
-<metadata type="slic3r.retract_lift_below">179</metadata>
-<metadata type="slic3r.retract_restart_extra">0</metadata>
+<metadata type="slic3r.retract_lift_below">0</metadata>
+<metadata type="slic3r.retract_restart_extra">0.02</metadata>
 <metadata type="slic3r.retract_restart_extra_toolchange">0</metadata>
-<metadata type="slic3r.retract_speed">70</metadata>
+<metadata type="slic3r.retract_speed">20</metadata>
 <metadata type="slic3r.seam_position">nearest</metadata>
 <metadata type="slic3r.sequential_print_priority">0</metadata>
 <metadata type="slic3r.serial_speed">250000</metadata>
 <metadata type="slic3r.shortcuts">support_material</metadata>
-<metadata type="slic3r.silent_mode">0</metadata>
-<metadata type="slic3r.single_extruder_multi_material">0</metadata>
-<metadata type="slic3r.single_extruder_multi_material_priming">1</metadata>
-<metadata type="slic3r.skirt_distance">2</metadata>
-<metadata type="slic3r.skirt_height">2</metadata>
-<metadata type="slic3r.skirts">1</metadata>
-<metadata type="slic3r.slice_closing_radius">0.049</metadata>
-<metadata type="slic3r.slicing_mode">regular</metadata>
-<metadata type="slic3r.slowdown_below_layer_time">15</metadata>
-<metadata type="slic3r.small_perimeter_speed">25</metadata>
-<metadata type="slic3r.solid_infill_below_area">0</metadata>
+<metadata type="slic3r.skirt_distance">5</metadata>
+<metadata type="slic3r.skirt_height">1</metadata>
+<metadata type="slic3r.skirts">2</metadata>
+<metadata type="slic3r.slowdown_below_layer_time">5</metadata>
+<metadata type="slic3r.small_perimeter_speed">30</metadata>
+<metadata type="slic3r.solid_infill_below_area">3</metadata>
 <metadata type="slic3r.solid_infill_every_layers">0</metadata>
 <metadata type="slic3r.solid_infill_extruder">1</metadata>
-<metadata type="slic3r.solid_infill_extrusion_width">0.45</metadata>
-<metadata type="slic3r.solid_infill_speed">80</metadata>
+<metadata type="slic3r.solid_infill_extrusion_width">0</metadata>
+<metadata type="slic3r.solid_infill_speed">30</metadata>
 <metadata type="slic3r.spiral_vase">0</metadata>
 <metadata type="slic3r.standby_temperature_delta">-5</metadata>
-<metadata type="slic3r.start_filament_gcode">"M900 K{if printer_notes=~/.*PRINTER_MODEL_MINI.*/ and nozzle_diameter[0]==0.6}0.12{elsif printer_notes=~/.*PRINTER_MODEL_MINI.*/ and nozzle_diameter[0]==0.8}0.06{elsif printer_notes=~/.*PRINTER_MODEL_MINI.*/}0.2{elsif nozzle_diameter[0]==0.8}0.01{elsif nozzle_diameter[0]==0.6}0.04{else}0.05{endif} ; Filament gcode LA 1.5\n{if printer_notes=~/.*PRINTER_MODEL_MINI.*/};{elsif printer_notes=~/.*PRINTER_HAS_BOWDEN.*/}M900 K200{elsif nozzle_diameter[0]==0.6}M900 K18{elsif nozzle_diameter[0]==0.8};{else}M900 K30{endif} ; Filament gcode LA 1.0"</metadata>
-<metadata type="slic3r.start_gcode">G90 ; use absolute coordinates\nM83 ; extruder relative mode\nM104 S170 ; set extruder temp for bed leveling\nM140 S[first_layer_bed_temperature] ; set bed temp\nM109 R170 ; wait for bed leveling temp\nM190 S[first_layer_bed_temperature] ; wait for bed temp\nM204 T1250 ; set travel acceleration\nG28 ; home all without mesh bed level\nG29 ; mesh bed leveling \nM204 T[machine_max_acceleration_travel] ; restore travel acceleration\nM104 S[first_layer_temperature] ; set extruder temp\nG92 E0\nG1 Y-2 X179 F2400\nG1 Z3 F720\nM109 S[first_layer_temperature] ; wait for extruder temp\n\n; intro line\nG1 X170 F1000\nG1 Z0.2 F720\nG1 X110 E8 F900\nG1 X40 E10 F700\nG92 E0\n\nM221 S95 ; set flow</metadata>
+<metadata type="slic3r.start_filament_gcode">"; Filament gcode\n"</metadata>
+<metadata type="slic3r.start_gcode">;D3D:START:START\nT0\nM104 S215 T0\n\nG21\nG90\nM107\nT0\nG28\nG29\nM109 T0 S215 T0\nG0 F3000\nM107\nT0\nG92 E0\nG0 X0 Y149 Z0.1 F3600\nG1 Y49 E6.5 F1200\nG0 Z1\nG92 E0</metadata>
 <metadata type="slic3r.support_material">0</metadata>
 <metadata type="slic3r.support_material_angle">0</metadata>
-<metadata type="slic3r.support_material_auto">1</metadata>
-<metadata type="slic3r.support_material_bottom_contact_distance">0</metadata>
-<metadata type="slic3r.support_material_bottom_interface_layers">0</metadata>
 <metadata type="slic3r.support_material_buildplate_only">0</metadata>
-<metadata type="slic3r.support_material_closing_radius">2</metadata>
 <metadata type="slic3r.support_material_contact_distance">0.2</metadata>
 <metadata type="slic3r.support_material_enforce_layers">0</metadata>
-<metadata type="slic3r.support_material_extruder">0</metadata>
-<metadata type="slic3r.support_material_extrusion_width">0.35</metadata>
-<metadata type="slic3r.support_material_interface_contact_loops">0</metadata>
-<metadata type="slic3r.support_material_interface_extruder">0</metadata>
+<metadata type="slic3r.support_material_extruder">1</metadata>
+<metadata type="slic3r.support_material_extrusion_width">0</metadata>
+<metadata type="slic3r.support_material_interface_extruder">1</metadata>
 <metadata type="slic3r.support_material_interface_extrusion_width">0</metadata>
-<metadata type="slic3r.support_material_interface_layers">2</metadata>
-<metadata type="slic3r.support_material_interface_pattern">rectilinear</metadata>
-<metadata type="slic3r.support_material_interface_spacing">0.2</metadata>
-<metadata type="slic3r.support_material_interface_speed">80%</metadata>
+<metadata type="slic3r.support_material_interface_layers">3</metadata>
+<metadata type="slic3r.support_material_interface_spacing">0</metadata>
+<metadata type="slic3r.support_material_interface_speed">100%</metadata>
 <metadata type="slic3r.support_material_max_layers">0</metadata>
-<metadata type="slic3r.support_material_pattern">rectilinear</metadata>
+<metadata type="slic3r.support_material_pattern">pillars</metadata>
 <metadata type="slic3r.support_material_pillar_size">2.5</metadata>
 <metadata type="slic3r.support_material_pillar_spacing">10</metadata>
-<metadata type="slic3r.support_material_spacing">2</metadata>
+<metadata type="slic3r.support_material_spacing">2.5</metadata>
 <metadata type="slic3r.support_material_speed">40</metadata>
-<metadata type="slic3r.support_material_style">grid</metadata>
-<metadata type="slic3r.support_material_synchronize_layers">0</metadata>
-<metadata type="slic3r.support_material_threshold">50</metadata>
-<metadata type="slic3r.support_material_with_sheath">0</metadata>
-<metadata type="slic3r.support_material_xy_spacing">60%</metadata>
+<metadata type="slic3r.support_material_threshold">60%</metadata>
 <metadata type="slic3r.temperature">215</metadata>
-<metadata type="slic3r.thick_bridges">0</metadata>
-<metadata type="slic3r.thin_walls">0</metadata>
-<metadata type="slic3r.threads">4</metadata>
-<metadata type="slic3r.thumbnails">16x16,220x124</metadata>
-<metadata type="slic3r.top_fill_pattern">monotonic</metadata>
-<metadata type="slic3r.top_infill_extrusion_width">0.4</metadata>
+<metadata type="slic3r.thin_walls">1</metadata>
+<metadata type="slic3r.threads">8</metadata>
+<metadata type="slic3r.top_infill_extrusion_width">0.45</metadata>
 <metadata type="slic3r.top_infill_pattern">rectilinear</metadata>
-<metadata type="slic3r.top_solid_infill_speed">40</metadata>
-<metadata type="slic3r.top_solid_layers">7</metadata>
-<metadata type="slic3r.top_solid_min_thickness">0.7</metadata>
-<metadata type="slic3r.travel_speed">150</metadata>
-<metadata type="slic3r.travel_speed_z">12</metadata>
+<metadata type="slic3r.top_solid_infill_speed">30</metadata>
+<metadata type="slic3r.top_solid_layers">5</metadata>
+<metadata type="slic3r.travel_speed">100</metadata>
 <metadata type="slic3r.use_firmware_retraction">0</metadata>
-<metadata type="slic3r.use_relative_e_distances">1</metadata>
+<metadata type="slic3r.use_relative_e_distances">0</metadata>
 <metadata type="slic3r.use_set_and_wait_bed">0</metadata>
 <metadata type="slic3r.use_set_and_wait_extruder">0</metadata>
 <metadata type="slic3r.use_volumetric_e">0</metadata>
-<metadata type="slic3r.variable_layer_height">1</metadata>
 <metadata type="slic3r.vibration_limit">0</metadata>
-<metadata type="slic3r.wipe">1</metadata>
-<metadata type="slic3r.wipe_into_infill">0</metadata>
-<metadata type="slic3r.wipe_into_objects">0</metadata>
-<metadata type="slic3r.wipe_tower">0</metadata>
-<metadata type="slic3r.wipe_tower_bridging">10</metadata>
-<metadata type="slic3r.wipe_tower_brim_width">2</metadata>
-<metadata type="slic3r.wipe_tower_no_sparse_layers">0</metadata>
-<metadata type="slic3r.wipe_tower_rotation_angle">0</metadata>
-<metadata type="slic3r.wipe_tower_width">60</metadata>
-<metadata type="slic3r.wipe_tower_x">170</metadata>
-<metadata type="slic3r.wipe_tower_y">140</metadata>
-<metadata type="slic3r.wiping_volumes_extruders">70,70</metadata>
-<metadata type="slic3r.wiping_volumes_matrix">0</metadata>
+<metadata type="slic3r.wipe">0</metadata>
 <metadata type="slic3r.xy_size_compensation">0</metadata>
 <metadata type="slic3r.z_offset">0</metadata>
 <metadata type="slic3r.z_steps_per_mm">0</metadata>

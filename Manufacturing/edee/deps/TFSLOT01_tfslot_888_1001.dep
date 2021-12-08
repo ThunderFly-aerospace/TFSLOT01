@@ -1,9 +1,10 @@
-tfslot_888_1001.scad: \
-	../../parameters.scad \
-	../lib/stdlib/bolts.scad \
-	../lib/stdlib/curvedPipe/curvedPipe.scad \
-	../lib/stdlib/curvedPipe/maths.scad \
-	../lib/stdlib/curvedPipe/moreShapes.scad \
-	../lib/stdlib/curvedPipe/vector.scad \
-	../lib/stdlib/naca4.scad \
-	../tfslot_888_1001.scad \
+/home/roman/repos/tf/TFSLOT01/Manufacturing/edee/amf/tfslot_888_1001.amf: \
+	/home/roman/repos/tf/TFSLOT01/CAD/src/lib/stdlib/curvedPipe/maths.scad \
+	/home/roman/repos/tf/TFSLOT01/CAD/src/lib/stdlib/curvedPipe/vector.scad \
+	/home/roman/repos/tf/TFSLOT01/CAD/src/lib/stdlib/naca4.scad \
+	/home/roman/repos/tf/TFSLOT01/CAD/src/lib/stdlib/curvedPipe/moreShapes.scad \
+	/home/roman/repos/tf/TFSLOT01/CAD/src/lib/stdlib/curvedPipe/curvedPipe.scad \
+	/home/roman/repos/tf/TFSLOT01/CAD/parameters.scad \
+	/home/roman/repos/tf/TFSLOT01/CAD/src/lib/stdlib/bolts.scad \
+	/home/roman/repos/tf/TFSLOT01/CAD/src/tfslot_888_1001.scad \
+	/home/roman/repos/tf/TFSLOT01/CAD/src/printplate/tfslot_888_1001.scad
