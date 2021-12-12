@@ -34,15 +34,16 @@ jobs:
 
     - name: Install requirements
       run: |
+        lsb_release -a
         # sudo apt-get update
         sudo apt-get install prusa-slicer 
         # sudo apt-get install libglu1-mesa libgtk2.0-0 libpangox-1.0-0
         # wget --progress=bar:force:noscroll https://dl.slic3r.org/linux/Slic3r-1.3.0-x86_64.AppImage -O ~/Slic3r.AppImage
         # chmod +x ~/Slic3r.AppImage
-        wget --progress=bar:force:noscroll https://github.com/prusa3d/PrusaSlicer/releases/download/version_2.4.0-beta3/PrusaSlicer-2.4.0-beta3+linux-x64-202112040926.AppImage -O ~/PrusaSlicer.AppImage
+        wget --progress=bar:force:noscroll https://github.com/prusa3d/PrusaSlicer/releases/download/version_2.4.0-beta4/PrusaSlicer-2.4.0-beta4+linux-x64-202112110942.AppImage -O ~/PrusaSlicer.AppImage
         #chmod +x ~/PrusaSlicer.AppImage
         #~/PrusaSlicer.AppImage --help
-        wget --progress=bar:force:noscroll https://files.openscad.org/OpenSCAD-2021.01-x86_64.AppImage -O ~/OpenSCAD.AppImage
+        wget --progress=bar:force:noscroll https://files.openscad.org/snapshots/OpenSCAD-2021.12.07.ai9682-2021.12.07.ai9682-x86_64.AppImage -O ~/OpenSCAD.AppImage
         chmod +x ~/OpenSCAD.AppImage
         sudo apt-get install libc-bin python3-setuptools xvfb
         sudo python3 -m pip install --upgrade pip
