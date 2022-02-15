@@ -1,4 +1,4 @@
-# TFSLOT01
+# TFSLOT01A - Venturi effect airspeed sensor for UAVs
 
 ![TFSLOT01A prototype](doc/img/TFSLOT_1_small.jpg)
 
