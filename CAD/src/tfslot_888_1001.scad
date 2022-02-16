@@ -244,8 +244,13 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
     }
 }
 
-//tfslot_888_1001(one_part=true, plastfast_screw = 20, cap_hole = 1);
+difference(){
 
+tfslot_888_1001(one_part=true, plastfast_screw = 20, cap_hole = 1);
+
+translate([0, 110, 0])
+    cube(200, center=true);
+}
 
 
 module tfslot_888_1002(bolts=true, plastfast_screw = 20)
@@ -318,3 +323,27 @@ translate([0, 110, 0])
 }
 
 tfslot_888_1002_support();
+
+
+
+// calibration tool
+module tfslot_888_1003(){
+
+difference(){
+    
+    translate([-1, 0, 0]) cube([2, width, distance+2], center=true);
+    translate([0, 0, -6]) rotate([0, 90, 0]) cylinder(d=1, h=10, center=true);
+    translate([0, 0, 6]) rotate([0, 90, 0]) cylinder(d=1, h=10, center=true);
+    }
+    //translate([1, 0, 0]) cube([6, width, 8], center=true);
+    
+    hull(){
+        translate([4, 0, 2.4]) rotate([90, 0, 0]) cylinder(d=3, h=width-5, center=true);
+        translate([-1, 0, 5]) rotate([90, 0, 0]) cylinder(d=1, h=width-5, center=true);
+        translate([-1, 0, -5]) rotate([90, 0, 0]) cylinder(d=1, h=width-5, center=true);
+        translate([4, 0, -2.4]) rotate([90, 0, 0]) cylinder(d=3, h=width-5, center=true);
+        
+    }
+
+}
+color("green") tfslot_888_1003();
