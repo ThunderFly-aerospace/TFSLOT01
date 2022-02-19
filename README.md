@@ -38,13 +38,11 @@ Sensor requires firmware with modifications from the [`tf/aspdimu`](https://gith
 
 TFSLOT01 contains specific aerodynamic profile. Therefore it requires different convernig model. This is done by setting parameter `CAL_AIR_CMODEL` to 3 (Venturi effect based airspeed sensor). Setting the wrong profile cause measurument of negative airspeed values, which results in `airspeed sensor failure` condition during the attempt to fly. 
 
-## PX4 Calibration process
+### PX4 Calibration process
 
 ![PXL_20220217_075317802](https://user-images.githubusercontent.com/5196729/154793903-b117aa99-cfa2-4d6b-bd6c-e1d15e969b36.jpg)
 
 The sensor itself is calibrated and the PX4 calibration process aims to verify that the sensor is properly mounted and connected. Thanks to the used sensor, this sensor is not sensitive to temperature changes and has zero offset. The sensor can only be calibrated (verified) once at when it is mounted into UAV. And there is no need to do it before each flight (as with other types of airspeed sensors). 
-
-### The verification process
 
 The procedure is performed with the help of calibration tool in few steps:
   1. Place the calibration tool in the TFSLOT inlet
