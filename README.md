@@ -32,7 +32,7 @@ The script assumes a connection to port _I2C 2_. This was set by the `-b` parame
 
 > The model for converting to the airspeed from an air pressure is not yet in the stable version of PX4 autopilot source code. Therefore the master upstream need to be used with the sensor. 
 
-Sensor requires firmware with modifications from the [`tf/aspdimu`](https://github.com/ThunderFly-aerospace/PX4Firmware/tree/tf/aspdimu) branch. The GitHub [pull-request](https://github.com/PX4/PX4-Autopilot/pull/18593) into PX4 master is currently opened to solve this issu. The airspeed recalculation model should be included in the next stable release. Alternatively, you can temporarily applicate [this patch](https://github.com/PX4/PX4-Autopilot/compare/master...ThunderFly-Aerospace:tf/aspdimu).
+Sensor requires firmware with modifications from the [`tf/aspdimu`](https://github.com/ThunderFly-aerospace/PX4Firmware/tree/tf/aspdimu) branch. The GitHub [pull-request](https://github.com/PX4/PX4-Autopilot/pull/18593) into PX4 master is currently opened to solve this issu. The airspeed recalculation model should be included in the next stable release. Alternatively, you can temporarily applicate [this PR changes](https://github.com/PX4/PX4-Autopilot/compare/master...ThunderFly-Aerospace:tf/aspdimu) or [apply patch](https://patch-diff.githubusercontent.com/raw/PX4/PX4-Autopilot/pull/18593.patch).
 
 ### Configuration
 
