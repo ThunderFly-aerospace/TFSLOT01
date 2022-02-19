@@ -42,12 +42,12 @@ The sensor itself is calibrated and the calibration aims to verify that the sens
 ### Calibration process
 Calibration is performed with the help of calibration tool in few steps:
   1. Place the calibration tool in the TFSLOT inlet
-  2. Press the tool against the senso with your hang (or rubber band) and hold. 
-  3. Start the [callibration process](https://docs.px4.io/master/en/config/airspeed.html#performing-the-calibrationhttps://docs.px4.io/master/en/config/airspeed.html#performing-the-calibration) in PX4
+  1. Press the tool against the sensor (green arrow) with your hang or rubber band and hold it there during the whole process. 
+  1. Start the [callibration process](https://docs.px4.io/master/en/config/airspeed.html#performing-the-calibrationhttps://docs.px4.io/master/en/config/airspeed.html#performing-the-calibration) in PX4
       1. Wait for measure of static offset (no blowing)
-      2. PX4 will command you to blow into airspeed sensor
+      1. PX4 will command you to blow into airspeed sensor
   1. Blow from the back of the sensor (blue arrow). If you blow a little, repeat. 
-  2. Calibration should be completed, confirmed by a beep and in the QGC. 
+  1. Calibration should be completed, confirmed by a beep and in the QGC. 
 
 
 ![calibration](https://user-images.githubusercontent.com/5196729/154794029-8daf515e-4c26-449b-a836-17f068259a1b.png)
