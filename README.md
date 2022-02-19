@@ -31,6 +31,9 @@ The script assumes a connection to port `I2C-2`. This can be changed with the `-
 
 Sensor requires firmware with modifications from the [`tf/aspdimu`](https://github.com/ThunderFly-aerospace/PX4Firmware/tree/tf/aspdimu) branch. GitHub [pull-request](https://github.com/PX4/PX4-Autopilot/pull/18593) into PX4 master is currently created. The airspeed recalculation model should be included in the next stable release. Alternatively, you can temporarily applicate [this](https://github.com/PX4/PX4-Autopilot/compare/master...ThunderFly-Aerospace:tf/aspdimu) patch.
 
+### Configuration
+TFSLOT01 contains specific profil. Therefore it requires different convernig model. This is done by setting parameter CAL_AIR_CMODEL to 3 (Venturi effect based airspeed sensor). Setting the wrong profile can cause measuring negative values.  
+
 
 ## Calibration
 
