@@ -27,4 +27,27 @@ sdp3x_airspeed start -X -b 2
 
 The script assumes a connection to port `I2C-2`. This can be changed with the `-b` parameter in both commands. 
 
-This approach requires firmware with modifications from the [`tf/aspdimu`](https://github.com/ThunderFly-aerospace/PX4Firmware/tree/tf/aspdimu) branch. In the future, we expect merging with upstream. 
+> The model for converting airspeed from air pressure is not yet in the stable version of autopilot. 
+
+Sensor requires firmware with modifications from the [`tf/aspdimu`](https://github.com/ThunderFly-aerospace/PX4Firmware/tree/tf/aspdimu) branch. GitHub [pull-request](https://github.com/PX4/PX4-Autopilot/pull/18593) into PX4 master is currently created. The airspeed recalculation model should be included in the next stable release. Alternatively, you can temporarily applicate [this](https://github.com/PX4/PX4-Autopilot/compare/master...ThunderFly-Aerospace:tf/aspdimu) patch.
+
+
+## Calibration
+
+![PXL_20220217_075317802](https://user-images.githubusercontent.com/5196729/154793903-b117aa99-cfa2-4d6b-bd6c-e1d15e969b36.jpg)
+
+The sensor itself is calibrated and the calibration aims to verify that the sensor is properly mounted and connected. Thanks to the used sensor, this sensor is not sensitive to temperature changes and has zero offset. The sensor can only be calibrated once when it is mounted into UAV. And there is no need to do it before each flight (as with other types of sensors). 
+
+
+### Calibration process
+Calibration is performed with the help of calibration tool in few steps:
+  1. Place the calibration tool in the TFSLOT inlet
+  2. Press the tool against the senso with your hang (or rubber band) and hold. 
+  3. Start the [callibration process](https://docs.px4.io/master/en/config/airspeed.html#performing-the-calibrationhttps://docs.px4.io/master/en/config/airspeed.html#performing-the-calibration) in PX4
+      1. Wait for measure of static offset (no blowing)
+      2. PX4 will command you to blow into airspeed sensor
+  1. Blow from the back of the sensor (blue arrow). If you blow a little, repeat. 
+  2. Calibration should be completed, confirmed by a beep and in the QGC. 
+
+
+![calibration](https://user-images.githubusercontent.com/5196729/154794029-8daf515e-4c26-449b-a836-17f068259a1b.png)
