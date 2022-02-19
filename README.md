@@ -21,11 +21,11 @@ TFSLOT is equipped with [TFASPDIMU](https://github.com/ThunderFly-aerospace/TFAS
 
 ## PX4 autopilot
 
-PX4 is able to initialize the sensor itself All you have to do is add the following two lines to the [startup configuration file](https://docs.px4.io/master/en/concept/system_startup.html#replacing-the-system-startup) on the Autopilot's SD card.
+PX4 is able to initialize the sensor itself. All you have to do is add the following two lines to the [startup configuration file](https://docs.px4.io/master/en/concept/system_startup.html#replacing-the-system-startup) on the Autopilot's SD card.
 
 ```
 icm20948_i2c_passthrough start -X -b 2 -a 0x68
-sdp3x_airspeed start -X -b 2
+sdp3x_airspeed start -X
 ```
 
 The script assumes a connection to port _I2C 2_. This was set by the `-b` parameter in both commands. The correct bus has to be set by the user. 
