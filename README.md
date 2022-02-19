@@ -42,15 +42,15 @@ TFSLOT01 contains specific aerodynamic profile. Therefore it requires different 
 
 ![PXL_20220217_075317802](https://user-images.githubusercontent.com/5196729/154793903-b117aa99-cfa2-4d6b-bd6c-e1d15e969b36.jpg)
 
-The sensor itself is calibrated and the PX4 calibration process aims to verify that the sensor is properly mounted and connected. Thanks to the used sensor, this sensor is not sensitive to temperature changes and has zero offset. The sensor can only be calibrated (verified) once at when it is mounted into UAV. And there is no need to do it before each flight (as with other types of airspeed sensors). 
+The sensor itself is calibrated and the PX4 calibration process aims to verify that the sensor is properly mounted and connected. Thanks to the used sensor, this sensor is not sensitive to temperature changes and has zero offset. It is enough to calibrate (verify) the sensor once, at when it is mounted into UAV. And there is no need to do it before each flight (as with other types of airspeed sensors). 
 
 The procedure is performed with the help of calibration tool in few steps:
   1. Place the calibration tool in the TFSLOT inlet
   1. Press the tool against the sensor (green arrow) with your hand or rubber band and hold it there during the whole process. 
   1. Start the [callibration process](https://docs.px4.io/master/en/config/airspeed.html#performing-the-calibrationhttps://docs.px4.io/master/en/config/airspeed.html#performing-the-calibration) in PX4
-      1. Wait for measure of static offset (no blowing)
+      1. Wait for the measure of static offset (no blowing)
       1. PX4 will command you to blow into airspeed sensor
-  1. Blow from the back of the sensor (blue arrow). If you blow a little, repeat the attempt. 
-  1. PX4 calibration should be completed, confirmed by a beep and in the QGC. 
+  1. Blow from the back of the sensor (blue arrow). If you blow too little, repeat the attempt. 
+  1. PX4 calibration should now be completed, confirmed by a beep and in the QGC. 
 
 ![calibration procedure](https://user-images.githubusercontent.com/5196729/154794029-8daf515e-4c26-449b-a836-17f068259a1b.png)
