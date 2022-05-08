@@ -1,12 +1,12 @@
-# TFSLOT01A - Venturi effect airspeed sensor for UAVs
+# TFSLOT01A - Low speed airspeed sensor for UAVs
 
 ![TFSLOT01A prototype](doc/img/TFSLOT_1_small.jpg)
 
-Our [TFSLOT](https://github.com/ThunderFly-aerospace/TFSLOT01) sensor is an airspeed sensor designed to use on UAVs. Due to 3D printed case it is possible to optimize the characteristics according to the location of sensor on UAV and specific application. First use of this sensor is on ThunderFly autogyro [TF-G2](https://github.com/ThunderFly-aerospace/TF-G2/).
+Our [TFSLOT](https://github.com/ThunderFly-aerospace/TFSLOT01) sensor is an airspeed sensor designed to use on UAVs to measure [IAS](https://en.wikipedia.org/wiki/Indicated_airspeed). Due to 3D printed case it is possible to optimize the characteristics according to the location of sensor on UAV and specific application. First use of this sensor is on ThunderFly autogyro [TF-G2](https://github.com/ThunderFly-aerospace/TF-G2/).
 
 TFSLOT is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/), write an email to info@thunderfly.cz or shop at [Tindie store](https://www.tindie.com/stores/thunderfly/).
 
-# Advantages to pitot-static tube
+## Advantages to pitot-static tube
 
 In contrast to classical [Pitot tube](https://en.wikipedia.org/wiki/Pitot_tube), the TFSLOT design is perfect choice for low airspeed measurement (generally bellow 10 m/s).
 The design has the following advantages compared to a pitot-probe:
@@ -14,6 +14,29 @@ The design has the following advantages compared to a pitot-probe:
   * Better resolution on low airspeeds
   * Less tendency to clogging
   * Direct differential pressure sensor integration without any additional tubing.
+
+## Working principle
+
+The sensor bassically uses the [Venturi Effect](https://en.wikipedia.org/wiki/Venturi_effect#Instrumentation_and_measurement) to measure fly velocity in the air.
+
+The velocity and pressure of fluid is required to meet [Bernoulli's principle](https://en.wikipedia.org/wiki/Bernoulli%27s_principle)
+
+![The first assumption](https://latex.codecogs.com/png.image?\large&space;\dpi{110}\frac{1}{2}\rho{v_\infty}^{2}&plus;p_\infty=\frac{1}{2}\rho{v}^{2}&plus;p)
+
+<!-- source: \frac{1}{2}\rho{v_\infty}^{2}+p_\infty=\frac{1}{2}\rho{v}^{2}+p -->
+
+Then the velocities are in relation to cross sections in the plane of preassure measurements ports
+
+![Area assuption from bernouli principle](https://latex.codecogs.com/png.image?\large&space;\dpi{110}\frac{v}{v_\infty}=\frac{A_D}{A_d})
+
+<!-- source: \frac{v}{v_\infty}=\frac{A_D}{A_d} -->
+
+Therefore equations for preassure difference and airspeed velocity could be derived.
+
+![Resulting equation](https://latex.codecogs.com/png.image?\large&space;\dpi{110}\Delta&space;p=\frac{1}{2}\rho{v_\infty}^{2}\left[\left(\frac{v}{v_\infty}\right)^2-1\right]\Rightarrow&space;&space;v_\infty=\sqrt{\frac{2\Delta&space;p}{\rho\left[\left(\frac{A_D}{A_d}\right)^2-1\right]}})
+
+<!-- source: \Delta p=\frac{1}{2}\rho{v_\infty}^{2}\left[\left(\frac{v}{v_\infty}\right)^2-1\right]\Rightarrow  v_\infty=\sqrt{\frac{2\Delta p}{\rho\left[\left(\frac{A_D}{A_d}\right)^2-1\right]}} -->
+
 
 # Usage 
 
@@ -32,7 +55,7 @@ The script assumes a connection to port _I2C 2_. This was set by the `-b` parame
 
 > The model for converting to the airspeed from an air pressure is not yet in the stable version of PX4 autopilot source code. Therefore the master upstream need to be used with the sensor. 
 
-Sensor requires firmware with modifications from the [`tf/aspdimu`](https://github.com/ThunderFly-aerospace/PX4Firmware/tree/tf/aspdimu) branch. The GitHub [pull-request](https://github.com/PX4/PX4-Autopilot/pull/18593) into PX4 master is currently opened to solve this issu. The airspeed recalculation model should be included in the next stable release. Alternatively, you can temporarily applicate [this PR changes](https://github.com/PX4/PX4-Autopilot/compare/master...ThunderFly-Aerospace:tf/aspdimu) or [apply patch](https://patch-diff.githubusercontent.com/raw/PX4/PX4-Autopilot/pull/18593.patch).
+Sensor requires firmware with modifications from the [`tf/aspdimu`](https://github.com/ThunderFly-aerospace/PX4Firmware/tree/tf/aspdimu) branch. The GitHub [pull-request](https://github.com/PX4/PX4-Autopilot/pull/18593) into PX4 master is currently opened to solve this issue. The airspeed recalculation model should be included in the next stable release. Alternatively, you can temporarily applicate [this PR changes](https://github.com/PX4/PX4-Autopilot/compare/master...ThunderFly-Aerospace:tf/aspdimu) or [apply patch](https://patch-diff.githubusercontent.com/raw/PX4/PX4-Autopilot/pull/18593.patch).
 
 ### Configuration
 
