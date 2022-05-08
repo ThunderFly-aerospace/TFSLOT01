@@ -1,14 +1,14 @@
 {
     "cog": {
         "gcode": {
-            "X": 71.8617,
-            "Y": 72.2533,
-            "Z": 26.6829
+            "X": 72.2881,
+            "Y": 72.6665,
+            "Z": 26.2409
         }
     },
     "time": {
-        "text": "1h 0m 55s",
-        "sec": 3655
+        "text": "1h 2m 25s",
+        "sec": 3625
     },
     "files": {
         "scad": "/home/roman/repos/tf/TFSLOT01/CAD/src/printplate/tfslot_888_1002.scad",

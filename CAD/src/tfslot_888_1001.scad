@@ -104,8 +104,8 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
 // Horni profil
     union(){
         
-        translate([length-2, -distance/2, 0]) cube([2, 0.1, width]);
-        translate([length-2, distance/2, 0]) cube([2, 0.1, width]);
+        translate([length-2, -distance/2, 0]) cube([2, 0.15, width]);
+        translate([length-20, distance/2, 0]) cube([20, 0.4, width]);
         
         translate([0, -distance/2, 0])
             airfoil(naca = naca, L = length, N = 100, h= width, open = false);
@@ -244,13 +244,8 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
     }
 }
 
-difference(){
-
 tfslot_888_1001(one_part=true, plastfast_screw = 20, cap_hole = 1);
 
-translate([0, 110, 0])
-    cube(200, center=true);
-}
 
 
 module tfslot_888_1002(bolts=true, plastfast_screw = 20)
@@ -262,7 +257,7 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) {
                     hull(){
                         //airfoil(naca = naca, L = length, N = 100, h= width, open = false);
                         airfoil(naca = 0047, L = length, N = 100, h= width, open = false);
-                        translate([length-5, 0, 0]) cube([5, 7, width]);
+                        translate([length-5, 0, 0]) cube([5, 7.3, width]);
                         
                         //#translate([3+2, 2, 0]) cylinder(d=6, h= width);
                     }
