@@ -11,8 +11,8 @@ TFSLOT is commercially available from [ThunderFly s.r.o.](https://www.thunderfly
 In contrast to classical [Pitot tube](https://en.wikipedia.org/wiki/Pitot_tube), the TFSLOT design is perfect choice for low airspeed measurement (generally bellow 10 m/s).
 The design has the following advantages compared to a pitot-probe:
 
-  * Better resolution on low airspeeds
-  * Less tendency to clogging
+  * Better resolution on low airspeeds (where kinetic pressure is small)
+  * Less tendency to clogging (due to absense of stagnation point)
   * Direct differential pressure sensor integration without any additional tubing.
 
 ## Working principle
