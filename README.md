@@ -41,12 +41,12 @@ Where
 
 | Symbol  | Explanation  |
 |--------|------------------|
-| ![delta p](https://latex.codecogs.com/png.image?\inline&space;\dpi{110}\Delta&space;p&space;)| Pressure difference |     
+| ![delta p](https://latex.codecogs.com/png.image?\inline&space;\dpi{110}\Delta&space;p&space;)| Measured pressure difference |     
 | ![rho](https://latex.codecogs.com/png.image?\inline&space;\dpi{110}\rho) | Air density |
-| ![V infinity](https://latex.codecogs.com/png.image?\inline&space;\dpi{110}v_\infty)| Free air velocity |
-| ![yellow](https://user-images.githubusercontent.com/5196729/102204908-bc653f80-3eca-11eb-9a1d-a02ea5481c03.png)   | Yellow            | General purpose signal |
-|  ![blue](https://user-images.githubusercontent.com/5196729/102205102-ffbfae00-3eca-11eb-9372-8406f7a4aa9d.png)  | Blue            |  Power return, Open-collector control signal |
-| ![black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png)   | Black             |  GND, Power return ground |
+| ![V infinity](https://latex.codecogs.com/png.image?\inline&space;\dpi{110}v_\infty)| Free air velocity e.g. measured airspeed |
+| ![v](https://latex.codecogs.com/png.image?\inline&space;\dpi{110}v) | The velocity of air running through the sensor |
+| ![A_D](https://latex.codecogs.com/png.image?\inline&space;\dpi{110}A_D) |  Cross-section area at the position of the outer pressure port |
+| ![A_d](https://latex.codecogs.com/png.image?\inline&space;\dpi{110}A_d) |  Cross-section area at the position of internal pressure port |
 
 
 # Usage 
