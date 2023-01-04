@@ -41,9 +41,9 @@ Where
 
 | Symbol  | Explanation  |
 |--------|------------------|
-| ![red](https://user-images.githubusercontent.com/5196729/102204855-ab1c3300-3eca-11eb-8083-646d633e3aef.png)    | Red  | Power voltage |     
-| ![green](https://user-images.githubusercontent.com/5196729/102205114-04846200-3ecb-11eb-8eb8-251c7e564707.png)    | Green   | General purpose signal |
-| ![white](https://user-images.githubusercontent.com/5196729/102204632-5e385c80-3eca-11eb-985d-a881acfae26a.png)| White |  General purpose signal |
+| ![delta p](https://latex.codecogs.com/png.image?\inline&space;\dpi{110}\Delta&space;p&space;)| Pressure difference |     
+| ![rho](https://latex.codecogs.com/png.image?\inline&space;\dpi{110}\rho) | Air density |
+| ![V infinity](https://latex.codecogs.com/png.image?\inline&space;\dpi{110}v_\infty)| Free air velocity |
 | ![yellow](https://user-images.githubusercontent.com/5196729/102204908-bc653f80-3eca-11eb-9a1d-a02ea5481c03.png)   | Yellow            | General purpose signal |
 |  ![blue](https://user-images.githubusercontent.com/5196729/102205102-ffbfae00-3eca-11eb-9372-8406f7a4aa9d.png)  | Blue            |  Power return, Open-collector control signal |
 | ![black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png)   | Black             |  GND, Power return ground |
