@@ -58,7 +58,7 @@ The equation for TFSLOT venturi-based sensor (see equations above) differs from 
 
 That means the TFSLOT sensor is more sensitive (e.g. has a higher measurable pressure difference at the same airspeed) than the pitot-static tube (at the same air density) in every configuration where 
 
-![TFSLOT sensitivity compared to pitot](https://latex.codecogs.com/png.image?\large&space;\dpi{110}frac{A_D}{A_d}>\sqrt{2})
+![TFSLOT sensitivity compared to pitot](https://latex.codecogs.com/png.image?\large&space;\dpi{110}\frac{A_D}{A_d}>\sqrt{2})
 
 The advantage of the higher sensitivity results in increased drag, but it could be negligible at low airspeeds. 
 
