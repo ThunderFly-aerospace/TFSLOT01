@@ -33,9 +33,20 @@ Then the velocities are in relation to cross sections in the plane of preassure 
 
 Therefore equations for preassure difference and airspeed velocity could be derived.
 
-![Resulting equation](https://latex.codecogs.com/png.image?\large&space;\dpi{110}\Delta&space;p=\frac{1}{2}\rho{v_\infty}^{2}\left[\left(\frac{v}{v_\infty}\right)^2-1\right]\Rightarrow&space;&space;v_\infty=\sqrt{\frac{2\Delta&space;p}{\rho\left[\left(\frac{A_D}{A_d}\right)^2-1\right]}})
+![Resulting equation for TFSLOT airspeed](https://latex.codecogs.com/png.image?\large&space;\dpi{110}\Delta&space;p=\frac{1}{2}\rho{v_\infty}^{2}\left[\left(\frac{v}{v_\infty}\right)^2-1\right]\Rightarrow&space;&space;v_\infty=\sqrt{\frac{2\Delta&space;p}{\rho\left[\left(\frac{A_D}{A_d}\right)^2-1\right]}})
 
 <!-- source: \Delta p=\frac{1}{2}\rho{v_\infty}^{2}\left[\left(\frac{v}{v_\infty}\right)^2-1\right]\Rightarrow  v_\infty=\sqrt{\frac{2\Delta p}{\rho\left[\left(\frac{A_D}{A_d}\right)^2-1\right]}} -->
+
+Where 
+
+| Symbol  | Explanation  |
+|--------|------------------|
+| ![red](https://user-images.githubusercontent.com/5196729/102204855-ab1c3300-3eca-11eb-8083-646d633e3aef.png)    | Red  | Power voltage |     
+| ![green](https://user-images.githubusercontent.com/5196729/102205114-04846200-3ecb-11eb-8eb8-251c7e564707.png)    | Green   | General purpose signal |
+| ![white](https://user-images.githubusercontent.com/5196729/102204632-5e385c80-3eca-11eb-985d-a881acfae26a.png)| White |  General purpose signal |
+| ![yellow](https://user-images.githubusercontent.com/5196729/102204908-bc653f80-3eca-11eb-9a1d-a02ea5481c03.png)   | Yellow            | General purpose signal |
+|  ![blue](https://user-images.githubusercontent.com/5196729/102205102-ffbfae00-3eca-11eb-9372-8406f7a4aa9d.png)  | Blue            |  Power return, Open-collector control signal |
+| ![black](https://user-images.githubusercontent.com/5196729/102205213-28e03e80-3ecb-11eb-95bb-7ba207360541.png)   | Black             |  GND, Power return ground |
 
 
 # Usage 
