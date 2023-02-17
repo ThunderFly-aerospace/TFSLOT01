@@ -64,7 +64,7 @@ The advantage of the higher sensitivity results in increased drag, but it could 
 
 # Usage 
 
-TFSLOT is equipped with [TFASPDIMU](https://github.com/ThunderFly-aerospace/TFASPDIMU02) electronics, which contains the required differential pressure sensor and an IMU unit through which the pressure sensor is connected. To activate I2C access to it, it is necessary to set the pass-through mode in the IMU unit. 
+TFSLOT is equipped with [TFASPDIMU](https://github.com/ThunderFly-aerospace/TFASPDIMU02) electronics, which contains the required differential pressure sensor and an IMU unit through which the pressure sensor is connected. To activate I2C access to it, it is necessary to set the pass-through mode in the IMU unit. The [TFASPDIMU02](https://github.com/ThunderFly-aerospace/TFASPDIMU02) has many options for how can be used, please look at its documentation for more details. 
 
 ## PX4 autopilot
 
