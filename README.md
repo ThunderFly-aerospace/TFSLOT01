@@ -60,7 +60,7 @@ That means the TFSLOT sensor is more sensitive (e.g. has a higher measurable pre
 
 ![TFSLOT sensitivity compared to pitot](https://latex.codecogs.com/png.image?\large&space;\dpi{110}\frac{A_D}{A_d}>\sqrt{2})
 
-The advantage of the higher sensitivity results in increased drag, but it could be negligible at low airspeeds. 
+The advantage of the higher sensitivity results in increased drag, but it could be negligible at low airspeeds. The best use case of the sensor is the integration of the sensing device into the relatively massive fuselage or other construction geometry. The user is supposed to find the best mounting option for the device or adapt the TFSLOT 3D printed case to fit the specific application. From that perspective, the TFSLOT01 is a fully functional development kit that is able to cover specific user needs. 
 
 # Usage 
 
