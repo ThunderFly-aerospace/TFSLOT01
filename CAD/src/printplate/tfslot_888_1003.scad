@@ -2,4 +2,5 @@
 use<../tfslot_888_1001.scad>
 
 $fn=50;
-rotate([0, -90, 0]) tfslot_888_1003();
+for (x=[0:5], y=[0:3s])
+    translate([x*25, y*40, 0]) rotate([0, -90, 0]) tfslot_888_1003();
