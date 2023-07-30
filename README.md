@@ -72,7 +72,7 @@ PX4 is able to initialize the sensor itself. All you have to do is add the follo
 
 ```
 icm20948_i2c_passthrough start -X -b 2 -a 0x68
-sdp3x_airspeed start -X
+sdp3x start -X
 ```
 
 The script assumes a connection to port _I2C 2_. This was set by the `-b` parameter in both commands. The correct bus has to be set by the user. 
