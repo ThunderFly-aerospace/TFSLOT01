@@ -30,6 +30,10 @@ sensor_sealing_nose_length = 2;
 
 
 
+M3_screw_diameter = 3.3;
+M3_insert_hole = 4.1;
+
+
 // Krabicka na PCB
 
 pcb_width = 15.2;
@@ -50,6 +54,11 @@ rail_h = rail_x/2-0.1;
 bolt_size = 3;
 bolt_len = 10;
 bolt_z = 15 - head_height(bolt_size); // top of cap - head_height
+
+
+mounting_thread = 1;
+
+
 
 module pipes()
 {
@@ -221,7 +230,23 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
             rotate([-90, 0, 0])
                 cylinder(d=PLASTFAST_diameter, h=30, $fn=14);
     }
+    
+    
+    if(mounting_thread){
+    
+        translate([length/4, -distance/2, width/2-plastfast_screw/2]){
+                
+                cylinder(d=M3_screw_diameter+0.2, h=100, $fn=50, center=true);
+                translate([0, 0, width/2+10-6]) cylinder(d=M3_insert_hole, h=100, $fn=50);
+                translate([0, 0, -width/2-90+6]) cylinder(d=M3_insert_hole, h=100, $fn=50);
+                
+                
+                }
+        
+    
+    }
 
+    
     if(cap_hole) {
         union(){
             // Rails
@@ -283,7 +308,7 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) {
     if(plastfast_screw){
         translate([length/4, distance/2-5, width/2-plastfast_screw/2])
             rotate([-90, 0, 0])
-                cylinder(d=PLASTFAST_diameter, h=30, $fn=14);
+                cylinder(d=PLASTFAST_diameter+0.4, h=30, $fn=14);
         translate([length/4, distance/2-5, width/2+plastfast_screw/2])
             rotate([-90, 0, 0])
                 cylinder(d=PLASTFAST_diameter, h=30, $fn=14);
