@@ -2,7 +2,7 @@
 
 ![TFSLOT01A prototype](doc/img/TFSLOT_1_small.jpg)
 
-[TFSLOT](https://github.com/ThunderFly-aerospace/TFSLOT01) sensor is an airspeed sensor designed to use on UAVs to measure [IAS](https://en.wikipedia.org/wiki/Indicated_airspeed). Due to the 3D printed case, it is possible to optimize the characteristics according to the location of the sensor on the UAV and specific application requirements on measuring range. The first use of this sensor is on ThunderFly autogyro [TF-G2](https://github.com/ThunderFly-aerospace/TF-G2/).
+[TFSLOT](https://github.com/ThunderFly-aerospace/TFSLOT01) sensor is an airspeed sensor designed to be used on UAVs to measure [IAS](https://en.wikipedia.org/wiki/Indicated_airspeed). Due to the 3D printed case, it is possible to optimize the characteristics according to the location of the sensor on the UAV and specific application requirements on measuring range. The first use of this sensor is on ThunderFly autogyro [TF-G2](https://github.com/ThunderFly-aerospace/TF-G2/).
 
 TFSLOT is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/), write an email to info@thunderfly.cz or shop at [Tindie store](https://www.tindie.com/products/thunderfly/tfslot01a-drone-indicated-airspeed-sensor/).
 
@@ -16,7 +16,7 @@ The velocity and pressure of the fluid are required to meet [Bernoulli's princip
 
 <!-- source: \frac{1}{2}\rho{v_\infty}^{2}+p_\infty=\frac{1}{2}\rho{v}^{2}+p -->
 
-Then the velocities are in relation to cross sections in the plane of pressure measurements ports
+Then the velocities are in relation to cross sections in the plane of pressure measurement ports
 
 ![Area assuption from bernouli principle](https://latex.codecogs.com/png.image?\large&space;\dpi{110}\frac{v}{v_\infty}=\frac{A_D}{A_d})
 
@@ -48,7 +48,7 @@ The design has the following advantages compared to a pitot probe:
   * Less tendency to clogging (due to the absence of stagnation point)
   * Direct differential pressure sensor integration without any additional tubing
 
-The improved resolution on low airspeeds is the principal difference from the pitot-static tube. Could be explained by comparing it with the classical equation for pitot-static tube: 
+The improved resolution on low airspeeds is the principal difference from the pitot-static tube. This could be explained by comparing it with the classical equation for pitot-static tube: 
 
 ![Pitot-static tube airspeed equation](https://latex.codecogs.com/png.image?\large&space;\dpi{110}v_\infty=\sqrt{\frac{2\Delta&space;p}{\rho}})
 
@@ -83,13 +83,13 @@ Sensor requires firmware with modifications from the [`tf/aspdimu`](https://gith
 
 ### Configuration
 
-TFSLOT01 contains a specific aerodynamic profile. Therefore it requires a different converting model. This is done by setting the parameter `CAL_AIR_CMODEL` to 3 (Venturi effect-based airspeed sensor). Setting the wrong profile cause the measurement of negative airspeed values, which results in an `airspeed sensor failure` condition during the attempt to fly. 
+TFSLOT01 contains a specific aerodynamic profile. Therefore it requires a different converting model. This is done by setting the parameter `CAL_AIR_CMODEL` to 3 (Venturi effect-based airspeed sensor). Setting the wrong profile causes the measurement of negative airspeed values, which results in an `airspeed sensor failure` condition during the attempt to fly. 
 
 ### PX4 Calibration process
 
 ![PXL_20220217_075317802](https://user-images.githubusercontent.com/5196729/154793903-b117aa99-cfa2-4d6b-bd6c-e1d15e969b36.jpg)
 
-The sensor itself is calibrated and the PX4 calibration process aims to verify that the sensor is properly mounted and connected. Thanks to the used sensor, this sensor is not sensitive to temperature changes and has zero offsets. It is enough to calibrate (verify) the sensor once when it is mounted into UAV. And there is no need to do it before each flight (as with other types of airspeed sensors). 
+The sensor itself is calibrated and the PX4 calibration process aims to verify that the sensor is properly mounted and connected. Thanks to the used sensor, this sensor is not sensitive to temperature changes and has zero offsets. It is enough to calibrate (verify) the sensor once it is mounted into the UAV. And there is no need to do it before each flight (as with other types of airspeed sensors). 
 
 The procedure is performed with the help of a calibration tool in a few steps:
   1. Place the calibration tool in the TFSLOT inlet
