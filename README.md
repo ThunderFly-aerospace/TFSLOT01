@@ -18,10 +18,9 @@ TFSLOT is commercially available from [ThunderFly s.r.o.](https://www.thunderfly
 
 | Parameter | Value | Description |
 |-----------|-------|-------------|
-| Airspeed measurement range | 0 - 48 m/s | Assumes air density 1.29 kg/m³ |
+| Airspeed measurement range | 0 - 48 m/s | Assumes air density 1.29 kg/m³, negative airspeeds are also indicated but scaling is invalid |
 | I2C Connector | 2x 4-pin JST-GH | [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf) |
-| RPM connector | 3-pin 2.54mm pitch header | Internal 22k Ohm pullup resistor |
-| I2C address | 0x21 SDP3x sensor, 0x68 IMU | SDP3x sensor is visible only after proper init of IMUKdy  |
+| I2C address | 0x21 SDP3x sensor, 0x68 IMU | SDP3x sensor is visible only after proper init of IMU |
 | I2C SCL clock frequency | Typ. 400 kHz | Operation above 400 kHz is possible, but unreliable|
 | Operating and storage temperature | −20°C to +40°C | Limited by case material |
 | Operational input voltage | +3.6V to +5.4V | Overvoltage internally protected by Zener diode, Undervoltage is not treated |
