@@ -4,9 +4,57 @@
 
 [TFSLOT](https://github.com/ThunderFly-aerospace/TFSLOT01) sensor is an airspeed sensor designed to be used on UAVs to measure [IAS](https://en.wikipedia.org/wiki/Indicated_airspeed). Due to the 3D printed case, it is possible to optimize the characteristics according to the location of the sensor on the UAV and specific application requirements on measuring range. The first use of this sensor is on ThunderFly autogyro [TF-G2](https://github.com/ThunderFly-aerospace/TF-G2/).
 
+## Main Features
+
+  * Improved low-speed resolution compared to traditional pitot tubes.
+  * Reduced tendency for clogging due to the absence of a stagnation point.
+  * Directly integrated differential pressure sensor, eliminating the need for additional tubing.
+  * Customizable 3D-printed case to fit specific applications.
+  * Integrated IMU to vibration diagnostics on AoA measurement. 
+
 TFSLOT is commercially available from [ThunderFly s.r.o.](https://www.thunderfly.cz/), write an email to info@thunderfly.cz or shop at [Tindie store](https://www.tindie.com/products/thunderfly/tfslot01a-drone-indicated-airspeed-sensor/).
 
-## Working principle
+## Technical Parameters
+
+| Parameter | Value | Description |
+|-----------|-------|-------------|
+| Airspeed measurement range | 0 - 48 m/s | Assumes air density 1.29 kg/m³ |
+| I2C Connector | 2x 4-pin JST-GH | [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf) |
+| RPM connector | 3-pin 2.54mm pitch header | Internal 22k Ohm pullup resistor |
+| I2C address | 0x21 SDP3x sensor, 0x68 IMU | SDP3x sensor is visible only after proper init of IMUKdy  |
+| I2C SCL clock frequency | Typ. 400 kHz | Operation above 400 kHz is possible, but unreliable|
+| Operating and storage temperature | −20°C to +40°C | Limited by case material |
+| Operational input voltage | +3.6V to +5.4V | Overvoltage internally protected by Zener diode, Undervoltage is not treated |
+| Mass | 14g | Printed case gcode included in docs |
+| Dimensions | 23.5x42x12.5mm | Default 3D printed Case |
+| Weather resistance | [IP42](https://en.wikipedia.org/wiki/IP_Code) | External connectors fully occupied |
+
+The TFSLOT uses the [TFASPDIMU02 electronics](https://github.com/ThunderFly-aerospace/TFASPDIMU02) which has many more options for how can be used, please look at its documentation for more details and parameters. 
+
+## Connection to the Pixhawk-based autopilots
+
+The I²C interface connectors respect the [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf). The signal and color coding of the connector and supplied cable are described by following table (ThunderFly color scheme):
+
+|Signal | Pixhawk Color | ThunderFly color |
+|--------|------------------|---------------------|
+| +5V    | Red | ![red](https://user-images.githubusercontent.com/5196729/102204855-ab1c3300-3eca-11eb-8083-646d633e3aef.png) Red |
+| SCL  | Black |  ![yellow](https://user-images.githubusercontent.com/5196729/102204908-bc653f80-3eca-11eb-9a1d-a02ea5481c03.png) Yellow  |
+| SDA  | Black |  ![green](https://user-images.githubusercontent.com/5196729/102205114-04846200-3ecb-11eb-8eb8-251c7e564707.png) Green |
+| GND | Black  | ![black](https://user-images.githubusercontent.com/5196729/102204896-b8d1b880-3eca-11eb-8b73-656cac9104e4.png) Black |
+
+The conductor colors in the cable are different from the Pixhawk standard to increase the visual distinction between multiple cables in the UAV.
+
+### Cable turning
+
+To improve I2C bus reliability, the supplied cable is specifically twisted by following the scheme
+
+- 10 turns for each pair SCL/+5V and SDA/GND per 30cm cable length
+- The two pairs are turned again by 4 turns of pairs per 30cm cable length.
+
+These special cable conductors' winding method greatly improves the signal integrity by minimizing the crosstalk between the SDA and SCL signals.
+
+
+## Working Principle
 
 The sensor basically uses the [Venturi Effect](https://en.wikipedia.org/wiki/Venturi_effect#Instrumentation_and_measurement) to measure fly velocity in the air.
 
@@ -39,7 +87,7 @@ Where
 | ![A_D](https://latex.codecogs.com/png.image?\inline&space;\dpi{110}A_D) |  Cross-section area at the position of the outer pressure port |
 | ![A_d](https://latex.codecogs.com/png.image?\inline&space;\dpi{110}A_d) |  Cross-section area at the position of internal pressure port |
 
-### Advantages to pitot-static tube
+### Comparison to pitot-static tube
 
 In contrast to classical [Pitot tube](https://en.wikipedia.org/wiki/Pitot_tube), the TFSLOT design is the perfect choice for low airspeed measurement (generally below 10 m/s).
 The design has the following advantages compared to a pitot probe:
