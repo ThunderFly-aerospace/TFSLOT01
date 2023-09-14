@@ -19,7 +19,7 @@ TFSLOT is commercially available from [ThunderFly s.r.o.](https://www.thunderfly
 | Parameter | Value | Description |
 |-----------|-------|-------------|
 | Airspeed measurement range | 0 - 48 m/s | Assumes air density 1.29 kg/m³, negative airspeeds are also indicated but scaling is invalid |
-| I2C Connector | 2x 4-pin JST-GH | [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf) |
+| I2C Connector | 4-pin JST-GH | [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf) |
 | I2C address | 0x21 SDP3x sensor, 0x68 IMU | SDP3x sensor is visible only after proper init of IMU |
 | I2C SCL clock frequency | Typ. 400 kHz | Operation above 400 kHz is possible, but unreliable|
 | Operating and storage temperature | −20°C to +40°C | Limited by case material |
@@ -43,7 +43,7 @@ The I²C interface connectors respect the [Pixhawk connector standard](https://g
 
 The conductor colors in the cable are different from the Pixhawk standard to increase the visual distinction between multiple cables in the UAV.
 
-### Cable turning
+### I2C Cable Twisting
 
 To improve I2C bus reliability, the supplied cable is specifically twisted by following the scheme
 
