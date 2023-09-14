@@ -24,8 +24,8 @@ TFSLOT is commercially available from [ThunderFly s.r.o.](https://www.thunderfly
 | I2C SCL clock frequency | Typ. 400 kHz | Operation above 400 kHz is possible, but unreliable|
 | Operating and storage temperature | −20°C to +40°C | Limited by case material |
 | Operational input voltage | +3.6V to +5.4V | Overvoltage internally protected by Zener diode, Undervoltage is not treated |
-| Mass | 14g | Printed case gcode included in docs |
-| Dimensions | 23.5x42x12.5mm | Default 3D printed Case |
+| Mass | 25g | Using the 3D printed case gcode included |
+| Dimensions | 35x40x35mm | Default 3D printed Case |
 | Weather resistance | [IP42](https://en.wikipedia.org/wiki/IP_Code) | External connectors fully occupied |
 
 The TFSLOT uses the [TFASPDIMU02 electronics](https://github.com/ThunderFly-aerospace/TFASPDIMU02) which has many more options for how can be used, please look at its documentation for more details and parameters. 
