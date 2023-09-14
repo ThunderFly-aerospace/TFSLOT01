@@ -23,6 +23,20 @@ The design brings several advantages when used on small-scale and slow-flying UA
 
 Another special function of the TFSLOT sensor is the integrated 9-axis IMU unit (magnetometer, accelerometer, and gyroscope). The sensor can be used as an external compass for the autopilot and it can improve the estimation of orientation in space. Accelerometer data, on the other hand, can be used to check vibrations. 
 
+## Technical Parameters
+
+| Parameter | Value | Description |
+|-----------|-------|-------------|
+| Airspeed measurement range | 0 - 48 m/s | Assumes air density 1.29 kg/m³, negative airspeeds are also indicated but scaling is invalid |
+| I2C Connector | 2x 4-pin JST-GH | [Pixhawk connector standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf) |
+| I2C address | 0x21 SDP3x sensor, 0x68 IMU | SDP3x sensor is visible only after proper init of IMU |
+| I2C SCL clock frequency | Typ. 400 kHz | Operation above 400 kHz is possible, but unreliable|
+| Operating and storage temperature | −20°C to +40°C | Limited by case material |
+| Operational input voltage | +3.6V to +5.4V | Overvoltage internally protected by Zener diode, Undervoltage is not treated |
+| Mass | 25g | Using the 3D printed case gcode included |
+| Dimensions | 35x40x35mm | Default 3D printed Case |
+| Weather resistance | [IP42](https://en.wikipedia.org/wiki/IP_Code) | External connectors fully occupied |
+
 ## What is the sensor supported for? 
 
 TFSLOT (PCB board TFASPDIMU02A) is currently supported by PX4 autopilot, where it can be used as an airspeed sensor and as an external IMU unit (external compass). Instructions on how to get this sensor to work with the PX4 autopilot can be found in the official [PX4 documentation](http://docs.px4.io/master/en/sensor/airspeed.html#airspeed-sensors)
