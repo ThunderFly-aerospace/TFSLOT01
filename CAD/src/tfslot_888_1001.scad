@@ -31,7 +31,7 @@ sensor_sealing_nose_length = 2;
 
 
 M3_screw_diameter = 3.3;
-M3_insert_hole = 4.1;
+M3_insert_hole = 3.9;
 
 
 // Krabicka na PCB
@@ -232,18 +232,16 @@ translate([0, -width/2, 0]) rotate([-90, 0, 0]) difference(){
     }
     
     
-    if(mounting_thread){
     
+    // Srouby pro zavitovou volozku
+    if(mounting_thread){    
         translate([length/4, -distance/2, width/2-plastfast_screw/2]){
                 
-                cylinder(d=M3_screw_diameter+0.2, h=100, $fn=50, center=true);
+                cylinder(d=M3_screw_diameter+0.4, h=100, $fn=50, center=true);
                 translate([0, 0, width/2+10-6]) cylinder(d=M3_insert_hole, h=100, $fn=50);
                 translate([0, 0, -width/2-90+6]) cylinder(d=M3_insert_hole, h=100, $fn=50);
-                
-                
-                }
-        
-    
+
+        }
     }
 
     
