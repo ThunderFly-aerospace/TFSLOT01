@@ -1,0 +1,10 @@
+{
+    "cog": {},
+    "time": {},
+    "files": {
+        "scad": "/home/runner/work/TFSLOT01/TFSLOT01/CAD/src/printplate/tfslot_888_1003.scad",
+        "amf": "/home/runner/work/TFSLOT01/TFSLOT01/Manufacturing/edee/amf/tfslot_888_1003.amf",
+        "stl": "/home/runner/work/TFSLOT01/TFSLOT01/Manufacturing/edee/stl/tfslot_888_1003.stl",
+        "gcode": "/home/runner/work/TFSLOT01/TFSLOT01/Manufacturing/edee/gcode/TFSLOT01_tfslot_888_1003.gcode"
+    }
+}

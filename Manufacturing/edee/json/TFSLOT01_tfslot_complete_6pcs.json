@@ -1,0 +1,10 @@
+{
+    "cog": {},
+    "time": {},
+    "files": {
+        "scad": "/home/runner/work/TFSLOT01/TFSLOT01/CAD/src/printplate/tfslot_complete_6pcs.scad",
+        "amf": "/home/runner/work/TFSLOT01/TFSLOT01/Manufacturing/edee/amf/tfslot_complete_6pcs.amf",
+        "stl": "/home/runner/work/TFSLOT01/TFSLOT01/Manufacturing/edee/stl/tfslot_complete_6pcs.stl",
+        "gcode": "/home/runner/work/TFSLOT01/TFSLOT01/Manufacturing/edee/gcode/TFSLOT01_tfslot_complete_6pcs.gcode"
+    }
+}

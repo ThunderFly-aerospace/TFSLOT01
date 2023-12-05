@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <amf unit="millimeter">
  <metadata type="producer">OpenSCAD 2021.01 (git 41f58fe)</metadata>
  <object id="0">
@@ -1571,13 +1570,18 @@
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-17</x>
+     <y>-10</y>
+     <z>-8.65</z>
+    </coordinates></vertex>
+    <vertex><coordinates>
+     <x>-17</x>
      <y>-7.65451</y>
      <z>-8.12953</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-17</x>
-     <y>-10</y>
-     <z>-8.85</z>
+     <y>-9.41426</y>
+     <z>-8.78369</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-17</x>
@@ -1586,8 +1590,8 @@
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-17</x>
-     <y>-9.10089</y>
-     <z>-9.28299</z>
+     <y>-8.94453</y>
+     <z>-9.15829</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-17</x>
@@ -1596,8 +1600,8 @@
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-17</x>
-     <y>-8.87883</y>
-     <z>-9.7441</z>
+     <y>-8.68385</y>
+     <z>-9.6996</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-17</x>
@@ -1606,8 +1610,8 @@
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-17</x>
-     <y>-8.87883</y>
-     <z>-10.2559</z>
+     <y>-8.68385</y>
+     <z>-10.3004</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-17</x>
@@ -1616,8 +1620,8 @@
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-17</x>
-     <y>-9.10089</y>
-     <z>-10.717</z>
+     <y>-8.94453</y>
+     <z>-10.8417</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-17</x>
@@ -1631,48 +1635,43 @@
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-17</x>
-     <y>-9.50103</y>
-     <z>-11.0361</z>
-    </coordinates></vertex>
-    <vertex><coordinates>
-     <x>-17</x>
-     <y>-10.499</y>
-     <z>-11.0361</z>
-    </coordinates></vertex>
-    <vertex><coordinates>
-     <x>-17</x>
-     <y>-10.8991</y>
-     <z>-10.717</z>
-    </coordinates></vertex>
-    <vertex><coordinates>
-     <x>-17</x>
-     <y>-11.1212</y>
-     <z>-10.2559</z>
+     <y>-9.41426</y>
+     <z>-11.2163</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-17</x>
      <y>-10</y>
-     <z>-11.15</z>
+     <z>-11.35</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-17</x>
-     <y>-9.50103</y>
-     <z>-8.96389</z>
+     <y>-10.5857</y>
+     <z>-11.2163</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-17</x>
-     <y>-10.8991</y>
-     <z>-9.28299</z>
+     <y>-11.0555</y>
+     <z>-10.8417</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-17</x>
-     <y>-10.499</y>
-     <z>-8.96389</z>
+     <y>-11.3162</y>
+     <z>-10.3004</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-17</x>
-     <y>-11.1212</y>
-     <z>-9.7441</z>
+     <y>-11.3162</y>
+     <z>-9.6996</z>
+    </coordinates></vertex>
+    <vertex><coordinates>
+     <x>-17</x>
+     <y>-11.0555</y>
+     <z>-9.15829</z>
+    </coordinates></vertex>
+    <vertex><coordinates>
+     <x>-17</x>
+     <y>-10.5857</y>
+     <z>-8.78369</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-18.3094</x>
@@ -4686,73 +4685,73 @@
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-16.1</x>
-     <y>-11.1212</y>
-     <z>-9.7441</z>
+     <y>-11.3162</y>
+     <z>-9.6996</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-16.1</x>
-     <y>-11.1212</y>
-     <z>-10.2559</z>
+     <y>-11.3162</y>
+     <z>-10.3004</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-16.1</x>
-     <y>-10.8991</y>
-     <z>-10.717</z>
+     <y>-11.0555</y>
+     <z>-10.8417</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-16.1</x>
-     <y>-10.8991</y>
-     <z>-9.28299</z>
+     <y>-11.0555</y>
+     <z>-9.15829</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-16.1</x>
-     <y>-10.499</y>
-     <z>-8.96389</z>
-    </coordinates></vertex>
-    <vertex><coordinates>
-     <x>-16.1</x>
-     <y>-10</y>
-     <z>-8.85</z>
-    </coordinates></vertex>
-    <vertex><coordinates>
-     <x>-16.1</x>
-     <y>-9.50103</y>
-     <z>-8.96389</z>
-    </coordinates></vertex>
-    <vertex><coordinates>
-     <x>-16.1</x>
-     <y>-9.10089</y>
-     <z>-9.28299</z>
-    </coordinates></vertex>
-    <vertex><coordinates>
-     <x>-16.1</x>
-     <y>-8.87883</y>
-     <z>-9.7441</z>
-    </coordinates></vertex>
-    <vertex><coordinates>
-     <x>-16.1</x>
-     <y>-8.87883</y>
-     <z>-10.2559</z>
-    </coordinates></vertex>
-    <vertex><coordinates>
-     <x>-16.1</x>
-     <y>-9.10089</y>
-     <z>-10.717</z>
-    </coordinates></vertex>
-    <vertex><coordinates>
-     <x>-16.1</x>
-     <y>-9.50103</y>
-     <z>-11.0361</z>
+     <y>-10.5857</y>
+     <z>-8.78369</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-16.1</x>
      <y>-10</y>
-     <z>-11.15</z>
+     <z>-8.65</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-16.1</x>
-     <y>-10.499</y>
-     <z>-11.0361</z>
+     <y>-9.41426</y>
+     <z>-8.78369</z>
+    </coordinates></vertex>
+    <vertex><coordinates>
+     <x>-16.1</x>
+     <y>-8.94453</y>
+     <z>-9.15829</z>
+    </coordinates></vertex>
+    <vertex><coordinates>
+     <x>-16.1</x>
+     <y>-8.68385</y>
+     <z>-9.6996</z>
+    </coordinates></vertex>
+    <vertex><coordinates>
+     <x>-16.1</x>
+     <y>-8.68385</y>
+     <z>-10.3004</z>
+    </coordinates></vertex>
+    <vertex><coordinates>
+     <x>-16.1</x>
+     <y>-8.94453</y>
+     <z>-10.8417</z>
+    </coordinates></vertex>
+    <vertex><coordinates>
+     <x>-16.1</x>
+     <y>-9.41426</y>
+     <z>-11.2163</z>
+    </coordinates></vertex>
+    <vertex><coordinates>
+     <x>-16.1</x>
+     <y>-10</y>
+     <z>-11.35</z>
+    </coordinates></vertex>
+    <vertex><coordinates>
+     <x>-16.1</x>
+     <y>-10.5857</y>
+     <z>-11.2163</z>
     </coordinates></vertex>
     <vertex><coordinates>
      <x>-18.7218</x>
@@ -6707,47 +6706,47 @@
      <v3>312</v3>
     </triangle>
     <triangle>
-     <v1>305</v1>
+     <v1>313</v1>
      <v2>312</v2>
-     <v3>313</v3>
+     <v3>314</v3>
     </triangle>
     <triangle>
-     <v1>314</v1>
-     <v2>313</v2>
-     <v3>315</v3>
+     <v1>315</v1>
+     <v2>314</v2>
+     <v3>316</v3>
     </triangle>
     <triangle>
-     <v1>316</v1>
-     <v2>315</v2>
-     <v3>317</v3>
+     <v1>317</v1>
+     <v2>316</v2>
+     <v3>318</v3>
     </triangle>
     <triangle>
-     <v1>318</v1>
-     <v2>317</v2>
-     <v3>319</v3>
+     <v1>319</v1>
+     <v2>318</v2>
+     <v3>320</v3>
     </triangle>
     <triangle>
-     <v1>320</v1>
-     <v2>319</v2>
-     <v3>321</v3>
+     <v1>321</v1>
+     <v2>320</v2>
+     <v3>322</v3>
     </triangle>
     <triangle>
-     <v1>322</v1>
-     <v2>323</v2>
-     <v3>324</v3>
-    </triangle>
-    <triangle>
-     <v1>325</v1>
+     <v1>323</v1>
      <v2>324</v2>
-     <v3>299</v3>
+     <v3>325</v3>
     </triangle>
     <triangle>
      <v1>326</v1>
+     <v2>325</v2>
+     <v3>299</v3>
+    </triangle>
+    <triangle>
+     <v1>327</v1>
      <v2>299</v2>
      <v3>298</v3>
     </triangle>
     <triangle>
-     <v1>305</v1>
+     <v1>328</v1>
      <v2>298</v2>
      <v3>300</v3>
     </triangle>
@@ -6792,59 +6791,39 @@
      <v3>53</v3>
     </triangle>
     <triangle>
-     <v1>327</v1>
-     <v2>305</v2>
-     <v3>328</v3>
-    </triangle>
-    <triangle>
      <v1>329</v1>
-     <v2>299</v2>
-     <v3>326</v3>
-    </triangle>
-    <triangle>
-     <v1>305</v1>
-     <v2>327</v2>
-     <v3>298</v3>
-    </triangle>
-    <triangle>
-     <v1>327</v1>
-     <v2>326</v2>
-     <v3>298</v3>
-    </triangle>
-    <triangle>
-     <v1>322</v1>
-     <v2>324</v2>
-     <v3>325</v3>
-    </triangle>
-    <triangle>
-     <v1>325</v1>
-     <v2>299</v2>
-     <v3>329</v3>
-    </triangle>
-    <triangle>
-     <v1>318</v1>
-     <v2>319</v2>
-     <v3>320</v3>
-    </triangle>
-    <triangle>
-     <v1>316</v1>
-     <v2>317</v2>
-     <v3>318</v3>
-    </triangle>
-    <triangle>
-     <v1>330</v1>
-     <v2>315</v2>
-     <v3>316</v3>
-    </triangle>
-    <triangle>
-     <v1>314</v1>
-     <v2>315</v2>
+     <v2>305</v2>
      <v3>330</v3>
     </triangle>
     <triangle>
+     <v1>327</v1>
+     <v2>298</v2>
+     <v3>328</v3>
+    </triangle>
+    <triangle>
      <v1>305</v1>
-     <v2>313</v2>
-     <v3>314</v3>
+     <v2>329</v2>
+     <v3>300</v3>
+    </triangle>
+    <triangle>
+     <v1>329</v1>
+     <v2>328</v2>
+     <v3>300</v3>
+    </triangle>
+    <triangle>
+     <v1>323</v1>
+     <v2>325</v2>
+     <v3>326</v3>
+    </triangle>
+    <triangle>
+     <v1>326</v1>
+     <v2>299</v2>
+     <v3>327</v3>
+    </triangle>
+    <triangle>
+     <v1>319</v1>
+     <v2>320</v2>
+     <v3>321</v3>
     </triangle>
     <triangle>
      <v1>331</v1>
@@ -6852,29 +6831,49 @@
      <v3>332</v3>
     </triangle>
     <triangle>
-     <v1>305</v1>
+     <v1>317</v1>
+     <v2>318</v2>
+     <v3>319</v3>
+    </triangle>
+    <triangle>
+     <v1>315</v1>
+     <v2>316</v2>
+     <v3>317</v3>
+    </triangle>
+    <triangle>
+     <v1>313</v1>
      <v2>314</v2>
-     <v3>332</v3>
+     <v3>315</v3>
     </triangle>
     <triangle>
      <v1>333</v1>
-     <v2>305</v2>
-     <v3>331</v3>
+     <v2>312</v2>
+     <v3>313</v3>
     </triangle>
     <triangle>
-     <v1>328</v1>
+     <v1>332</v1>
      <v2>305</v2>
      <v3>333</v3>
     </triangle>
     <triangle>
-     <v1>320</v1>
-     <v2>321</v2>
-     <v3>323</v3>
+     <v1>305</v1>
+     <v2>312</v2>
+     <v3>333</v3>
     </triangle>
     <triangle>
-     <v1>320</v1>
-     <v2>323</v2>
-     <v3>322</v3>
+     <v1>330</v1>
+     <v2>305</v2>
+     <v3>331</v3>
+    </triangle>
+    <triangle>
+     <v1>321</v1>
+     <v2>322</v2>
+     <v3>324</v3>
+    </triangle>
+    <triangle>
+     <v1>321</v1>
+     <v2>324</v2>
+     <v3>323</v3>
     </triangle>
     <triangle>
      <v1>305</v1>
@@ -11952,9 +11951,19 @@
      <v3>296</v3>
     </triangle>
     <triangle>
+     <v1>297</v1>
+     <v2>299</v2>
+     <v3>325</v3>
+    </triangle>
+    <triangle>
      <v1>295</v1>
-     <v2>324</v2>
-     <v3>323</v3>
+     <v2>297</v2>
+     <v3>325</v3>
+    </triangle>
+    <triangle>
+     <v1>295</v1>
+     <v2>325</v2>
+     <v3>324</v3>
     </triangle>
     <triangle>
      <v1>293</v1>
@@ -11964,16 +11973,6 @@
     <triangle>
      <v1>926</v1>
      <v2>295</v2>
-     <v3>323</v3>
-    </triangle>
-    <triangle>
-     <v1>297</v1>
-     <v2>299</v2>
-     <v3>324</v3>
-    </triangle>
-    <triangle>
-     <v1>295</v1>
-     <v2>297</v2>
      <v3>324</v3>
     </triangle>
     <triangle>
@@ -12022,78 +12021,78 @@
      <v3>927</v3>
     </triangle>
     <triangle>
-     <v1>323</v1>
-     <v2>321</v2>
+     <v1>324</v1>
+     <v2>322</v2>
      <v3>928</v3>
     </triangle>
     <triangle>
      <v1>926</v1>
-     <v2>323</v2>
+     <v2>324</v2>
      <v3>928</v3>
     </triangle>
     <triangle>
-     <v1>321</v1>
-     <v2>319</v2>
+     <v1>322</v1>
+     <v2>320</v2>
      <v3>932</v3>
     </triangle>
     <triangle>
      <v1>928</v1>
-     <v2>321</v2>
+     <v2>322</v2>
      <v3>929</v3>
     </triangle>
     <triangle>
      <v1>929</v1>
-     <v2>321</v2>
+     <v2>322</v2>
      <v3>932</v3>
     </triangle>
     <triangle>
-     <v1>319</v1>
-     <v2>317</v2>
+     <v1>320</v1>
+     <v2>318</v2>
      <v3>933</v3>
     </triangle>
     <triangle>
      <v1>932</v1>
-     <v2>319</v2>
+     <v2>320</v2>
      <v3>933</v3>
     </triangle>
     <triangle>
-     <v1>317</v1>
-     <v2>315</v2>
+     <v1>318</v1>
+     <v2>316</v2>
      <v3>934</v3>
     </triangle>
     <triangle>
      <v1>933</v1>
-     <v2>317</v2>
+     <v2>318</v2>
      <v3>935</v3>
     </triangle>
     <triangle>
      <v1>935</v1>
-     <v2>317</v2>
+     <v2>318</v2>
      <v3>934</v3>
     </triangle>
     <triangle>
-     <v1>315</v1>
-     <v2>313</v2>
+     <v1>316</v1>
+     <v2>314</v2>
      <v3>336</v3>
     </triangle>
     <triangle>
      <v1>934</v1>
-     <v2>315</v2>
+     <v2>316</v2>
      <v3>335</v3>
     </triangle>
     <triangle>
      <v1>335</v1>
-     <v2>315</v2>
+     <v2>316</v2>
      <v3>336</v3>
     </triangle>
     <triangle>
-     <v1>313</v1>
+     <v1>314</v1>
      <v2>312</v2>
      <v3>338</v3>
     </triangle>
     <triangle>
      <v1>336</v1>
-     <v2>313</v2>
+     <v2>314</v2>
      <v3>338</v3>
     </triangle>
     <triangle>
@@ -12109,142 +12108,142 @@
     <triangle>
      <v1>936</v1>
      <v2>937</v2>
-     <v3>333</v3>
-    </triangle>
-    <triangle>
-     <v1>333</v1>
-     <v2>937</v2>
-     <v3>328</v3>
-    </triangle>
-    <triangle>
-     <v1>938</v1>
-     <v2>327</v2>
-     <v3>937</v3>
-    </triangle>
-    <triangle>
-     <v1>937</v1>
-     <v2>327</v2>
-     <v3>328</v3>
-    </triangle>
-    <triangle>
-     <v1>939</v1>
-     <v2>936</v2>
      <v3>331</v3>
     </triangle>
     <triangle>
      <v1>331</v1>
-     <v2>936</v2>
-     <v3>333</v3>
+     <v2>937</v2>
+     <v3>330</v3>
     </triangle>
     <triangle>
-     <v1>940</v1>
-     <v2>939</v2>
+     <v1>938</v1>
+     <v2>329</v2>
+     <v3>937</v3>
+    </triangle>
+    <triangle>
+     <v1>937</v1>
+     <v2>329</v2>
+     <v3>330</v3>
+    </triangle>
+    <triangle>
+     <v1>939</v1>
+     <v2>936</v2>
      <v3>332</v3>
     </triangle>
     <triangle>
      <v1>332</v1>
-     <v2>939</v2>
+     <v2>936</v2>
      <v3>331</v3>
+    </triangle>
+    <triangle>
+     <v1>940</v1>
+     <v2>939</v2>
+     <v3>333</v3>
+    </triangle>
+    <triangle>
+     <v1>333</v1>
+     <v2>939</v2>
+     <v3>332</v3>
     </triangle>
     <triangle>
      <v1>941</v1>
      <v2>940</v2>
-     <v3>314</v3>
+     <v3>313</v3>
     </triangle>
     <triangle>
-     <v1>314</v1>
+     <v1>313</v1>
      <v2>940</v2>
-     <v3>332</v3>
+     <v3>333</v3>
     </triangle>
     <triangle>
      <v1>942</v1>
      <v2>941</v2>
-     <v3>330</v3>
+     <v3>315</v3>
     </triangle>
     <triangle>
-     <v1>330</v1>
+     <v1>315</v1>
      <v2>941</v2>
-     <v3>314</v3>
+     <v3>313</v3>
     </triangle>
     <triangle>
      <v1>943</v1>
      <v2>942</v2>
-     <v3>316</v3>
+     <v3>317</v3>
     </triangle>
     <triangle>
-     <v1>316</v1>
+     <v1>317</v1>
      <v2>942</v2>
-     <v3>330</v3>
+     <v3>315</v3>
     </triangle>
     <triangle>
-     <v1>318</v1>
+     <v1>319</v1>
      <v2>944</v2>
      <v3>943</v3>
     </triangle>
     <triangle>
-     <v1>316</v1>
-     <v2>318</v2>
+     <v1>317</v1>
+     <v2>319</v2>
      <v3>943</v3>
     </triangle>
     <triangle>
      <v1>945</v1>
      <v2>944</v2>
-     <v3>318</v3>
+     <v3>319</v3>
     </triangle>
     <triangle>
-     <v1>320</v1>
+     <v1>321</v1>
      <v2>945</v2>
-     <v3>318</v3>
+     <v3>319</v3>
     </triangle>
     <triangle>
      <v1>946</v1>
      <v2>945</v2>
-     <v3>320</v3>
+     <v3>321</v3>
     </triangle>
     <triangle>
-     <v1>322</v1>
+     <v1>323</v1>
      <v2>946</v2>
-     <v3>320</v3>
+     <v3>321</v3>
     </triangle>
     <triangle>
      <v1>947</v1>
      <v2>946</v2>
-     <v3>322</v3>
+     <v3>323</v3>
     </triangle>
     <triangle>
-     <v1>325</v1>
+     <v1>326</v1>
      <v2>947</v2>
-     <v3>322</v3>
+     <v3>323</v3>
     </triangle>
     <triangle>
      <v1>948</v1>
      <v2>947</v2>
-     <v3>325</v3>
-    </triangle>
-    <triangle>
-     <v1>329</v1>
-     <v2>948</v2>
-     <v3>325</v3>
-    </triangle>
-    <triangle>
-     <v1>949</v1>
-     <v2>948</v2>
-     <v3>329</v3>
-    </triangle>
-    <triangle>
-     <v1>326</v1>
-     <v2>949</v2>
-     <v3>329</v3>
-    </triangle>
-    <triangle>
-     <v1>938</v1>
-     <v2>949</v2>
      <v3>326</v3>
     </triangle>
     <triangle>
      <v1>327</v1>
-     <v2>938</v2>
+     <v2>948</v2>
      <v3>326</v3>
+    </triangle>
+    <triangle>
+     <v1>949</v1>
+     <v2>948</v2>
+     <v3>327</v3>
+    </triangle>
+    <triangle>
+     <v1>328</v1>
+     <v2>949</v2>
+     <v3>327</v3>
+    </triangle>
+    <triangle>
+     <v1>938</v1>
+     <v2>949</v2>
+     <v3>328</v3>
+    </triangle>
+    <triangle>
+     <v1>329</v1>
+     <v2>938</v2>
+     <v3>328</v3>
     </triangle>
     <triangle>
      <v1>935</v1>
@@ -12347,7 +12346,7 @@
      <v3>355</v3>
     </triangle>
     <triangle>
-     <v1>942</v1>
+     <v1>941</v1>
      <v2>357</v2>
      <v3>352</v3>
     </triangle>
@@ -12377,9 +12376,9 @@
      <v3>352</v3>
     </triangle>
     <triangle>
-     <v1>940</v1>
-     <v2>941</v2>
-     <v3>352</v3>
+     <v1>942</v1>
+     <v2>357</v2>
+     <v3>941</v3>
     </triangle>
     <triangle>
      <v1>943</v1>
@@ -12402,13 +12401,13 @@
      <v3>944</v3>
     </triangle>
     <triangle>
-     <v1>947</v1>
-     <v2>948</v2>
+     <v1>946</v1>
+     <v2>947</v2>
      <v3>358</v3>
     </triangle>
     <triangle>
-     <v1>946</v1>
-     <v2>947</v2>
+     <v1>947</v1>
+     <v2>948</v2>
      <v3>358</v3>
     </triangle>
     <triangle>
@@ -12512,8 +12511,8 @@
      <v3>943</v3>
     </triangle>
     <triangle>
-     <v1>941</v1>
-     <v2>942</v2>
+     <v1>940</v1>
+     <v2>941</v2>
      <v3>352</v3>
     </triangle>
     <triangle>
@@ -14548,5 +14547,164 @@
     </triangle>
    </volume>
   </mesh>
- </object>
+ <metadata type="slic3r.adaptive_slicing">0</metadata>
+<metadata type="slic3r.adaptive_slicing_quality">90%</metadata>
+<metadata type="slic3r.avoid_crossing_perimeters">0</metadata>
+<metadata type="slic3r.bed_shape">0x0,150x0,150x150,0x150</metadata>
+<metadata type="slic3r.bed_temperature">0</metadata>
+<metadata type="slic3r.bottom_infill_pattern">rectilinear</metadata>
+<metadata type="slic3r.bottom_solid_layers">5</metadata>
+<metadata type="slic3r.bridge_acceleration">0</metadata>
+<metadata type="slic3r.bridge_fan_speed">100</metadata>
+<metadata type="slic3r.bridge_flow_ratio">1</metadata>
+<metadata type="slic3r.bridge_speed">40</metadata>
+<metadata type="slic3r.brim_connections_width">0</metadata>
+<metadata type="slic3r.brim_ears">0</metadata>
+<metadata type="slic3r.brim_ears_max_angle">125</metadata>
+<metadata type="slic3r.brim_width">0</metadata>
+<metadata type="slic3r.complete_objects">0</metadata>
+<metadata type="slic3r.cooling">1</metadata>
+<metadata type="slic3r.default_acceleration">0</metadata>
+<metadata type="slic3r.disable_fan_first_layers">4</metadata>
+<metadata type="slic3r.dont_support_bridges">1</metadata>
+<metadata type="slic3r.duplicate_distance">6</metadata>
+<metadata type="slic3r.end_filament_gcode">"; Filament-specific end gcode \n;END gcode for filament\n"</metadata>
+<metadata type="slic3r.end_gcode">M104 S0\nM140 S0\n;Retract the filament\nG92 E1\nG1 E-1 F300\n G91 \n G1 Z5 F300 \n; End of Gcode</metadata>
+<metadata type="slic3r.external_perimeter_extrusion_width">0</metadata>
+<metadata type="slic3r.external_perimeter_speed">90%</metadata>
+<metadata type="slic3r.external_perimeters_first">0</metadata>
+<metadata type="slic3r.extra_perimeters">1</metadata>
+<metadata type="slic3r.extruder_clearance_height">20</metadata>
+<metadata type="slic3r.extruder_clearance_radius">20</metadata>
+<metadata type="slic3r.extruder_offset">0x0</metadata>
+<metadata type="slic3r.extrusion_axis">E</metadata>
+<metadata type="slic3r.extrusion_multiplier">0.93</metadata>
+<metadata type="slic3r.extrusion_width">0</metadata>
+<metadata type="slic3r.fan_always_on">1</metadata>
+<metadata type="slic3r.fan_below_layer_time">30</metadata>
+<metadata type="slic3r.fan_percentage">0</metadata>
+<metadata type="slic3r.filament_colour">#FFFFFF</metadata>
+<metadata type="slic3r.filament_cost">0</metadata>
+<metadata type="slic3r.filament_density">1.24</metadata>
+<metadata type="slic3r.filament_diameter">1.75</metadata>
+<metadata type="slic3r.filament_max_volumetric_speed">0</metadata>
+<metadata type="slic3r.fill_angle">45</metadata>
+<metadata type="slic3r.fill_density">10%</metadata>
+<metadata type="slic3r.fill_gaps">1</metadata>
+<metadata type="slic3r.fill_pattern">cubic</metadata>
+<metadata type="slic3r.first_layer_acceleration">0</metadata>
+<metadata type="slic3r.first_layer_bed_temperature">0</metadata>
+<metadata type="slic3r.first_layer_extrusion_width">150%</metadata>
+<metadata type="slic3r.first_layer_height">0.3</metadata>
+<metadata type="slic3r.first_layer_speed">30</metadata>
+<metadata type="slic3r.first_layer_temperature">215</metadata>
+<metadata type="slic3r.gap_fill_speed">20</metadata>
+<metadata type="slic3r.gcode_arcs">0</metadata>
+<metadata type="slic3r.gcode_comments">0</metadata>
+<metadata type="slic3r.gcode_flavor">reprap</metadata>
+<metadata type="slic3r.has_heatbed">0</metadata>
+<metadata type="slic3r.host_type">octoprint</metadata>
+<metadata type="slic3r.infill_acceleration">0</metadata>
+<metadata type="slic3r.infill_every_layers">1</metadata>
+<metadata type="slic3r.infill_extruder">1</metadata>
+<metadata type="slic3r.infill_extrusion_width">0</metadata>
+<metadata type="slic3r.infill_first">0</metadata>
+<metadata type="slic3r.infill_only_where_needed">0</metadata>
+<metadata type="slic3r.infill_overlap">115%</metadata>
+<metadata type="slic3r.infill_speed">40</metadata>
+<metadata type="slic3r.interface_shells">0</metadata>
+<metadata type="slic3r.interior_brim_width">0</metadata>
+<metadata type="slic3r.label_printed_objects">0</metadata>
+<metadata type="slic3r.layer_height">0.2</metadata>
+<metadata type="slic3r.match_horizontal_surfaces">0</metadata>
+<metadata type="slic3r.max_fan_speed">100</metadata>
+<metadata type="slic3r.max_layer_height">0.3</metadata>
+<metadata type="slic3r.max_print_speed">80</metadata>
+<metadata type="slic3r.max_volumetric_speed">0</metadata>
+<metadata type="slic3r.min_fan_speed">100</metadata>
+<metadata type="slic3r.min_layer_height">0.15</metadata>
+<metadata type="slic3r.min_print_speed">10</metadata>
+<metadata type="slic3r.min_shell_thickness">0.8</metadata>
+<metadata type="slic3r.min_skirt_length">0</metadata>
+<metadata type="slic3r.min_top_bottom_shell_thickness">1.2</metadata>
+<metadata type="slic3r.nozzle_diameter">0.4</metadata>
+<metadata type="slic3r.only_retract_when_crossing_perimeters">0</metadata>
+<metadata type="slic3r.ooze_prevention">0</metadata>
+<metadata type="slic3r.output_filename_format">[input_filename_base].gcode</metadata>
+<metadata type="slic3r.overhangs">1</metadata>
+<metadata type="slic3r.perimeter_acceleration">0</metadata>
+<metadata type="slic3r.perimeter_extruder">1</metadata>
+<metadata type="slic3r.perimeter_extrusion_width">0</metadata>
+<metadata type="slic3r.perimeter_speed">40</metadata>
+<metadata type="slic3r.perimeters">3</metadata>
+<metadata type="slic3r.pressure_advance">0</metadata>
+<metadata type="slic3r.raft_layers">0</metadata>
+<metadata type="slic3r.regions_overlap">0</metadata>
+<metadata type="slic3r.resolution">0</metadata>
+<metadata type="slic3r.retract_before_travel">2</metadata>
+<metadata type="slic3r.retract_layer_change">0</metadata>
+<metadata type="slic3r.retract_length">2</metadata>
+<metadata type="slic3r.retract_length_toolchange">10</metadata>
+<metadata type="slic3r.retract_lift">0</metadata>
+<metadata type="slic3r.retract_lift_above">0</metadata>
+<metadata type="slic3r.retract_lift_below">0</metadata>
+<metadata type="slic3r.retract_restart_extra">0.02</metadata>
+<metadata type="slic3r.retract_restart_extra_toolchange">0</metadata>
+<metadata type="slic3r.retract_speed">20</metadata>
+<metadata type="slic3r.seam_position">nearest</metadata>
+<metadata type="slic3r.sequential_print_priority">0</metadata>
+<metadata type="slic3r.serial_speed">250000</metadata>
+<metadata type="slic3r.shortcuts">support_material</metadata>
+<metadata type="slic3r.skirt_distance">5</metadata>
+<metadata type="slic3r.skirt_height">1</metadata>
+<metadata type="slic3r.skirts">2</metadata>
+<metadata type="slic3r.slowdown_below_layer_time">5</metadata>
+<metadata type="slic3r.small_perimeter_speed">30</metadata>
+<metadata type="slic3r.solid_infill_below_area">3</metadata>
+<metadata type="slic3r.solid_infill_every_layers">0</metadata>
+<metadata type="slic3r.solid_infill_extruder">1</metadata>
+<metadata type="slic3r.solid_infill_extrusion_width">0</metadata>
+<metadata type="slic3r.solid_infill_speed">30</metadata>
+<metadata type="slic3r.spiral_vase">0</metadata>
+<metadata type="slic3r.standby_temperature_delta">-5</metadata>
+<metadata type="slic3r.start_filament_gcode">"; Filament gcode\n"</metadata>
+<metadata type="slic3r.start_gcode">;D3D:START:START\nT0\nM104 S215 T0\n\nG21\nG90\nM107\nT0\nG28\nG29\nM109 T0 S215 T0\nG0 F3000\nM107\nT0\nG92 E0\nG0 X0 Y149 Z0.1 F3600\nG1 Y49 E6.5 F1200\nG0 Z1\nG92 E0</metadata>
+<metadata type="slic3r.support_material">0</metadata>
+<metadata type="slic3r.support_material_angle">0</metadata>
+<metadata type="slic3r.support_material_buildplate_only">0</metadata>
+<metadata type="slic3r.support_material_contact_distance">0.2</metadata>
+<metadata type="slic3r.support_material_enforce_layers">0</metadata>
+<metadata type="slic3r.support_material_extruder">1</metadata>
+<metadata type="slic3r.support_material_extrusion_width">0</metadata>
+<metadata type="slic3r.support_material_interface_extruder">1</metadata>
+<metadata type="slic3r.support_material_interface_extrusion_width">0</metadata>
+<metadata type="slic3r.support_material_interface_layers">3</metadata>
+<metadata type="slic3r.support_material_interface_spacing">0</metadata>
+<metadata type="slic3r.support_material_interface_speed">100%</metadata>
+<metadata type="slic3r.support_material_max_layers">0</metadata>
+<metadata type="slic3r.support_material_pattern">pillars</metadata>
+<metadata type="slic3r.support_material_pillar_size">2.5</metadata>
+<metadata type="slic3r.support_material_pillar_spacing">10</metadata>
+<metadata type="slic3r.support_material_spacing">2.5</metadata>
+<metadata type="slic3r.support_material_speed">40</metadata>
+<metadata type="slic3r.support_material_threshold">60%</metadata>
+<metadata type="slic3r.temperature">215</metadata>
+<metadata type="slic3r.thin_walls">1</metadata>
+<metadata type="slic3r.threads">8</metadata>
+<metadata type="slic3r.top_infill_extrusion_width">0.45</metadata>
+<metadata type="slic3r.top_infill_pattern">rectilinear</metadata>
+<metadata type="slic3r.top_solid_infill_speed">30</metadata>
+<metadata type="slic3r.top_solid_layers">5</metadata>
+<metadata type="slic3r.travel_speed">100</metadata>
+<metadata type="slic3r.use_firmware_retraction">0</metadata>
+<metadata type="slic3r.use_relative_e_distances">0</metadata>
+<metadata type="slic3r.use_set_and_wait_bed">0</metadata>
+<metadata type="slic3r.use_set_and_wait_extruder">0</metadata>
+<metadata type="slic3r.use_volumetric_e">0</metadata>
+<metadata type="slic3r.vibration_limit">0</metadata>
+<metadata type="slic3r.wipe">0</metadata>
+<metadata type="slic3r.xy_size_compensation">0</metadata>
+<metadata type="slic3r.z_offset">0</metadata>
+<metadata type="slic3r.z_steps_per_mm">0</metadata>
+</object>
 </amf>
