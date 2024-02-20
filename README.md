@@ -150,8 +150,4 @@ The procedure is performed with the help of a calibration tool in a few steps:
 ![calibration procedure](https://user-images.githubusercontent.com/5196729/154794029-8daf515e-4c26-449b-a836-17f068259a1b.png)
 
 # FAQ 
-
-## Is there a maximum altitude limit on the operation of the TFSLOT sensor?
-
-There is no hard limit of maximum altitude to operate the TFSLOT01A sensor. Although the sensitivity of the sensor decreases with decreasing air density. See the working principle description in the section above for a detailed explanation.
-
+Frequently asked questions are listed on [TFSLOT's documentation page](https://docs.thunderfly.cz/avionics/TFSLOT01#faq)
