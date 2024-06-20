@@ -3,7 +3,7 @@
 TFSLOT is a state-of-the-art airspeed sensor designed specifically for use in Unmanned Aerial Vehicles (UAVs). Utilizing the principle of the [Venturi effect](https://en.wikipedia.org/wiki/Venturi_effect) with a differential pressure sensor for accurate airspeed measurement, this device is also equipped with an integrated [Inertial Measurement Unit](https://en.wikipedia.org/wiki/Inertial_measurement_unit) (IMU). The unique design and features of TFSLOT01 solve common issues associated with Pitot tubes, offering a robust solution for aerial applications.
 
 <p align="center">
-  <img src="doc/img/TFSLOT_1_small.jpg" />
+  <img src="doc/img/TFSLOT_1.jpg" />
 </p>
 
 ## TFSLOT01 features
@@ -48,5 +48,5 @@ The TFSLOT01A sensor (PCB board [TFASPDIMU02A](https://github.com/ThunderFly-aer
 ### Robotics and measurement
 For other applications, the sensor can be easily connected to any computer with an I2C interface, such as RaspberryPi or a generic desktop with a USB to I2C converter (e.g., [USBI2C02A](https://www.mlab.cz/module/USBI2C01/), [shop it on tindie](https://www.tindie.com/products/mlab-project/mlab-usbi2c01a-usb-to-smbusi2c-bridge/)), and the differential pressure values or values from the IMU unit can be read, for example, by a Python script.
 
-# FAQ 
+# FAQ
 Frequently asked questions are listed on [TFSLOT's documentation page](https://docs.thunderfly.cz/avionics/TFSLOT01#faq)
