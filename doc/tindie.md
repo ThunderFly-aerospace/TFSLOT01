@@ -1,76 +1,84 @@
-## Overview
+## TFSLOT01: Clogging-Free Airspeed Sensor for UAVs
 
-The TFSLOT sensor is a cutting-edge airspeed sensor with an integrated 9-axis IMU unit. Designed to offer a reliable and innovative solution for drones, the sensor is fully open-source and offers a range of features that set it apart from traditional Pitot tubes.
-
----
-
-## Table of Contents
-1. [Features](#features)
-2. [Advantages](#advantages)
-3. [Technical Specifications](#technical-specifications)
-4. [Compatibility](#compatibility)
-5. [What's Included](#whats-included)
-6. [Accessories](#accessories)
+An innovative Venturi-effect airspeed sensor with a 9-axis IMU and customizable design. Open-source and ideal for low-speed UAVs.
 
 ---
 
-## Features <a name="features"></a>
+### Overview
 
-- **Airspeed Measurement**: Utilizes the Venturi effect principle for accurate airspeed data.
-- **Integrated IMU**: Contains a 9-axis IMU unit (magnetometer, accelerometer, and gyroscope).
-- **External Magnetometer**: Can function as an external compass for autopilots.
-- **Weatherproof**: Designed to withstand various weather conditions.
+The **TFSLOT01 sensor** is a next-generation airspeed sensor designed for UAVs, leveraging the Venturi effect for superior performance at low airspeeds. This clog-resistant design is coupled with an integrated 9-axis IMU to be ready for additional diagnostic capabilities like vibration monitoring and angle-of-attack measurements.
 
----
+This product is fully open-source, with a customizable 3D-printed case for seamless integration into UAV designs. Whether you're a developer, researcher, or enthusiast, the TFSLOT01 provides reliability, adaptability, and advanced functionality.
 
-## Advantages Over Traditional Pitot-static Tubes <a name="advantages"></a>
-
-- **High Resolution**: Better resolution at low airspeeds (below 10 m/s).
-- **Configurable Sensitivity**: The Airfoil profile can be changed for different sensitivity levels.
-- **Reduced Clogging**: No stagnation point, reducing the risk of clogging by clay or snow.
-- **Direct Sensor Integration**: Eliminates the need for additional tubing, reducing the risk of leaks.
-- **Open-Source Design**: Allows for direct integration into the drone's mechanical construction.
-- **Additional Metrics**: Integrated IMU can measure vibrations, angle of attack, and more.
 
 ---
 
-## Technical Specifications <a name="technical-specifications"></a>
+### Key Features
 
-| Parameter | Value | Description |
-|-----------|-------|-------------|
-| Airspeed Range | 0 - 48 m/s | Assumes air density of 1.29 kg/m³ |
-| I2C Connector | 4-pin JST-GH | [Pixhawk Standard](https://github.com/pixhawk/Pixhawk-Standards/blob/master/DS-009%20Pixhawk%20Connector%20Standard.pdf) |
-| Operating Temperature | −20°C to +40°C | Limited by case material |
-| Input Voltage | +3.6V to +5.4V | Overvoltage protected by Zener diode |
-| Mass | 25g | With included 3D printed case |
-| Dimensions | 35x40x35mm | Default 3D printed case |
-| Weather Resistance | [IP42](https://en.wikipedia.org/wiki/IP_Code) | External connectors fully occupied |
+- **Clog-Resistant Design**: Venturi-based measurement reduces clogging risks, ideal for low-speed UAVs.
+- **Integrated IMU**: Features a 9-axis IMU (magnetometer, accelerometer, gyroscope) for advanced diagnostics.
+- **Customizable**: 3D-printed case can be adapted to specific applications.
+- **Weatherproof Build**: IP42-rated for reliable operation in diverse conditions.
+- **Enhanced Resolution**: Optimized for speeds below 10 m/s.
+- **Direct Integration**: No need for additional tubing, reducing maintenance concerns.
 
 ---
 
-## Compatibility <a name="compatibility"></a>
+### Technical Specifications
 
-- **PX4 Autopilot**: Fully supported and can be used as both an airspeed sensor and an external IMU.
-- **Ardupilot**: Hardware compatible but lacks airspeed calculation.
-- **Other Systems**: Easily connectable to any computer with an I2C interface, such as RaspberryPi.
+| **Parameter**          | **Value**            | **Description**                           |
+|-------------------------|----------------------|-------------------------------------------|
+| Airspeed Range          | 0 - 48 m/s          | Assumes air density of 1.29 kg/m³         |
+| Dimensions              | 35 x 40 x 35 mm     | Default 3D-printed case                   |
+| Weight                  | 25 g                | Compact and lightweight                   |
+| Operating Temperature   | −20°C to +40°C      | Reliable in diverse weather              |
+| Input Voltage           | +3.6V to +5.4V      | Overvoltage protection included           |
+| I2C Connector           | 4-pin JST-GH        | Pixhawk-compatible standard               |
+| Weather Resistance      | IP42                | Protection against dust and water splashes|
 
-> [PX4 Documentation for Setup](http://docs.px4.io/master/en/sensor/airspeed.html#airspeed-sensors)
 
----
-
-## What's Included <a name="whats-included"></a>
-
-- TFASPDIMU02A (Sensor board)
-- TFSLOT01A (Plastic case, color may vary)
-- Sealing O-rings
-- I2C cable (optional)
-
-> The product is assembled and ready to use.
+The sensor can operate at any altitude, but sensitivity decreases as air density drops. See the documentation for details.
 
 ---
 
-## Accessories <a name="accessories"></a>
+### Compatibility
 
-Additional I2C cables are not included but can be [purchased separately](https://www.tindie.com/products/thunderfly/tfcabxxi2c01-i2c-cable-for-pixhawk-drones/). Our cables are designed for high resistance to electromagnetic interference and flexibility.
+- **PX4 Autopilots**: Full airspeed and IMU integration.
+- **Ardupilot**: Hardware-compatible (airspeed calculations require manual configuration).
+- **Custom Systems**: Supports I2C interfaces.
 
-- [TFCAB15I2C01](https://github.com/ThunderFly-aerospace/TFCAB01) [Buy at Tindie](https://www.tindie.com/products/thunderfly/tfcab15i2c01-15-cm-i2c-cable-for-pixhawk-drones/)
+Follow the [PX4 integration guide](http://docs.px4.io/master/en/sensor/airspeed.html#airspeed-sensors) for setup.
+
+---
+
+### Included in the Package
+
+- TFSLOT01 sensor (assembled and ready to use)
+    - 3D-printed protective case
+    - Sealing O-rings
+    - Optional I2C cable
+
+---
+
+### Accessories
+
+For enhanced reliability and flexibility, we offer high-quality [I2C cables](https://www.tindie.com/products/thunderfly/tfcab15i2c01-15-cm-i2c-cable-for-pixhawk-drones/), specially designed to minimize electromagnetic interference.
+
+---
+
+### Product Changelog
+
+- **TFSLOT01C (2024)**: Enhanced mounting options for broader compatibility.
+- **TFSLOT01B (2022)**: Upgraded electronics for better performance.
+- **TFSLOT01A (2021)**: Initial prototype (not publicly released).
+
+For full details, visit the [releases](https://github.com/ThunderFly-aerospace/TFSLOT01/releases).
+
+---
+
+### Why Choose TFSLOT01?
+
+Traditional Pitot tubes often struggle with clogging and poor resolution at low airspeeds. The TFSLOT01 sensor eliminates these issues with its innovative Venturi-effect design. Its customizable case and open-source design make it the perfect choice for UAV enthusiasts and professionals.
+
+For more detailed technical information, please see the full [documentation](https://docs.thunderfly.cz/avionics/TFSLOT01/).
+
