@@ -43,10 +43,10 @@ TFSLOT can be bought directly from us via our contact [email](https://www.thunde
 ## Support and Integration
 
 ### Drone avionics
-The TFSLOT01A sensor (PCB board [TFASPDIMU02A](https://github.com/ThunderFly-aerospace/TFASPDIMU02)) is currently supported by the PX4 autopilot, where it can be utilized both as an airspeed sensor and as an external IMU unit (external magnetometer). Instructions for integrating the sensor with the PX4 autopilot can be found in the official [PX4 documentation](http://docs.px4.io/master/en/sensor/airspeed.html#airspeed-sensors). The sensor is also hardware-compatible with other autopilots, such as Ardupilot, but currently lacks the computation code to convert differential pressure into airspeed.
+The TFSLOT01A sensor (PCB board [TFASPDIMU02](https://github.com/ThunderFly-aerospace/TFASPDIMU02)) is currently supported by the PX4 autopilot, where it can be utilized both as an airspeed sensor and as an external IMU unit (external magnetometer). Instructions for integrating the sensor with the PX4 autopilot can be found in the official [PX4 documentation](http://docs.px4.io/master/en/sensor/airspeed.html#airspeed-sensors). The sensor is also hardware-compatible with other autopilots, such as Ardupilot, but currently lacks the computation code to convert differential pressure into airspeed.
 
 ### Robotics and measurement
-For other applications, the sensor can be easily connected to any computer with an I2C interface, such as RaspberryPi or a generic desktop with a USB to I2C converter (e.g., [USBI2C02A](https://www.mlab.cz/module/USBI2C01/), [shop it on tindie](https://www.tindie.com/products/mlab-project/mlab-usbi2c01a-usb-to-smbusi2c-bridge/)), and the differential pressure values or values from the IMU unit can be read, for example, by a Python script.
+For other applications, the sensor can be easily connected to any computer with an I2C interface, such as RaspberryPi or a generic desktop with a USB to I2C converter (e.g., [USBI2C02](https://www.mlab.cz/module/USBI2C01/), [shop it on tindie](https://www.tindie.com/products/mlab-project/mlab-usbi2c01a-usb-to-smbusi2c-bridge/)), and the differential pressure values or values from the IMU unit can be read, for example, by a Python script.
 
 # FAQ
 Frequently asked questions are listed on [TFSLOT's documentation page](https://docs.thunderfly.cz/avionics/TFSLOT01#faq)
